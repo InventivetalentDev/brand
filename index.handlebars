@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>inventivetalent Branding Resources and Guidelines</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            .color_container {
+                width: 150px;
+                height: 150px;
+                border-radius: 5%;
+            }
+
+            .color_container > div {
+                padding: 10px;
+                font-weight: bold;
+                mix-blend-mode: difference;
+                color: white;
+            }
+
+            .img_preview_container {
+                width: 100%;
+                position: relative;
+            }
+
+            .img_preview_container > img {
+                height: auto;
+            }
+
+            .img_preview_container > .image_preview_download_button {
+                /*mix-blend-mode: difference;*/
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                /*text-shadow: black 0.5px 0.5px 4px;*/
+                background-color: rgba(211, 211, 211, 0.6);
+                border-radius: 10%;
+                padding: 2px;
+            }
+
+            .img_preview_container > a:nth-of-type(1) {
+                top: 5px;
+                left: 5px;
+            }
+
+            .img_preview_container > a:nth-of-type(2) {
+                top: 5px;
+                left: 45px;
+            }
+
+            .img_preview_container > a:nth-of-type(3) {
+                top: 5px;
+                left: 85px;
+            }
+        </style>
+        <style>
+                {{#each brands}}
+                    #tab_link_{{id}}:before{
+                        content: url("{{tabImage}}");
+                        vertical-align: -20%;
+                        padding-right: 5px;
+                    }
+                {{/each}}
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs z-depth-1">
+                        {{#each brands}}
+                            <li class="tab col s2">
+                                <a id="tab_link_{{id}}" href="#tab_{{id}}">{{name}}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{#each brands}}
+                    <div id="tab_{{id}}" class="col s12">
+                        <div class="container">
+                            {{#if hasImages}}
+                                <div id="{{id}}_images">
+                                    <h3>Images</h3>
+                                    <div class="row">
+                                        {{#each images}}
+                                            <div class="col s12 m6 l6 xl4">
+                                                <div class="row">
+                                                    <div class="img_preview_container" id="image_{{../name}}_{{id}}">
+                                                        <img id="img_preview_{{id}}" src="img/{{../name}}/{{file}}-x{{@root.previewSize}}.png" width="{{@root.previewSize}}" alt="{{file}}"/>
+                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="{{sizesStr}}">PNG</a>
+                                                        {{#if hasSvg}}
+                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-format="svg">SVG</a>
+                                                        {{/if}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            {{/if}}
+                            {{#if hasColors}}
+                                <div id="{{id}}_colors">
+                                    <h3>Colors</h3>
+                                    <div class="row">
+                                        {{#each colors}}
+                                            <div class="col s12 m4 l3 xl3">
+                                                <div class="row">
+                                                    {{#if isColor}}
+                                                        <div id="color_{{../name}}_{{name}}" class="color_container" style="background-color:{{color}}">
+                                                            <div>{{name}}<br/>{{color}}</div>
+                                                        </div>
+                                                    {{/if}}
+                                                    {{#if isGradient}}
+                                                        <div id="gradient_{{../name}}_{{name}}" class="color_container gradient_container" style="background-image:linear-gradient({{gradientDirection}} {{#each gradient}},{{this}}{{/each}})">
+                                                            <div>{{name}}<br/>{{#each gradient}} {{this}}{{/each}}</div>
+                                                        </div>
+                                                    {{/if}}
+                                                </div>
+                                            </div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            {{/if}}
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div id="image_download_modal" class="modal">
+            <div class="modal-content">
+                <h4>Download Image</h4>
+                <div>
+                    <span id="image_download_title"></span>
+
+                    <br/>
+
+                    <div class="input-field col s12">
+                        <select id="image_download_size_select">
+                        </select>
+                        <label>Size</label>
+                    </div>
+
+                    <a class="btn image_download_btn" target="_blank" id="modal_image_download_button" data-brand="" data-image="" data-size="{{@root.previewSize}}" data-format="png" href="#" download>Download</a>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.tabs').tabs();
+                $('select').formSelect();
+                $('.modal').modal();
+
+                $(".img_modal_button").on("click", function (e) {
+                    e.preventDefault();
+
+                    let $this = $(this);
+                    let brand = $this.data("brand");
+                    let image = $this.data("image");
+                    let sizes = $this.data("sizes") || [];
+                    let format = $this.data("format") || "png";
+
+
+                    showImageDownloadModal(brand, image, format, sizes);
+                });
+
+                $(".image_preview_download_button").each(function () {
+                    let $this = $(this);
+                    let brand = $this.data("brand");
+                    let image = $this.data("image");
+                    let size = $this.data("size");
+                    let format = $this.data("format");
+                    $this.attr("href", getImagePath(brand, image, size, format));
+                });
+
+                $(".image_download_btn").on("click", function () {
+                    let $this = $(this);
+                    let brand = $this.data("brand");
+                    let image = $this.data("image");
+                    let size = $this.data("size");
+                    let format = $this.data("format");
+                    // window.open(getImagePath(brand,image,size,format), "_blank");
+                })
+
+            });
+
+            function getImagePath(brand, image, size, format) {
+                let file = image;
+                if (format === "png") {
+                    file += "-x" + size + ".png";
+                } else if (format === "svg") {
+                    file += "-svg.svg";
+                }
+                return "img/" + brand + "/" + file;
+            }
+
+            $("#image_download_size_select").on("change", function () {
+                console.log("change");
+                let $btn = $("#modal_image_download_button");
+                $btn.data("size", this.value);
+                $btn.attr("href", getImagePath($btn.data("brand"), $btn.data("image"), this.value, $btn.data("format")))
+                $btn.attr("download", $btn.data("image") + "." + $btn.data("format"))
+            });
+
+            function showImageDownloadModal(brand, image, format, sizes) {
+
+                console.log("Open Download Modal");
+                console.log("brand: " + brand)
+                console.log("image: " + image);
+                console.log("sizes: " + sizes);
+                console.log("format: " + format);
+
+                let btn = $("#modal_image_download_button");
+                btn.data("brand", brand);
+                btn.data("image", image);
+                btn.data("format", format || "png");
+                $("#modal_image_download_button").attr("href", getImagePath(brand, image,{{@root.previewSize}}, format));
+                $("#modal_image_download_button").attr("download", image + "." + format);
+
+                $("#image_download_title").text(brand + " " + image);
+
+                $("#image_download_size_select").empty();
+                for (let size of sizes) {
+                    $("#image_download_size_select").append("<option value='" + size + "' " + (size ==={{@root.previewSize}}? "selected" : "") + ">" + size + "</option>");
+                }
+                $("#image_download_size_select").formSelect();
+
+                M.Modal.getInstance(document.getElementById("image_download_modal")).open();
+            }
+        </script>
+    </body>
+</html>
