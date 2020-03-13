@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node index.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ejs": "^3.0.1",
     "handlebars": "^4.7.3"
   }
 }
