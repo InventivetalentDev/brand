@@ -55,11 +55,11 @@
         </style>
         <style>
                 {{#each brands}}
-                    #tab_link_{{id}}:before{
-                        content: url("{{tabImage}}");
-                        vertical-align: -20%;
-                        padding-right: 5px;
-                    }
+                    {{id}} {
+                    content: url({{tabImage}});
+                    vertical-align: -20%;
+                    padding-right: 5px;
+                }
                 {{/each}}
         </style>
     </head>
@@ -86,10 +86,10 @@
                                             <div class="col s12 m6 l6 xl4">
                                                 <div class="row">
                                                     <div class="img_preview_container" id="image_{{../name}}_{{id}}">
-                                                        <img id="img_preview_{{id}}" src="img/{{../name}}/{{file}}-x{{@root.previewSize}}.png" width="{{@root.previewSize}}" alt="{{file}}"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="{{sizesStr}}">PNG</a>
+                                                        <img id="img_preview_{{id}}" src="img/{{../name}}/{{file}}-x{{@root.previewSize}}.png" width="{{@root.previewSize}}" alt="{{name}}"/>
+                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="{{sizesStr}}" data-name="{{name}}">PNG</a>
                                                         {{#if hasSvg}}
-                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-format="svg">SVG</a>
+                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-name="{{name}}" data-format="svg">SVG</a>
                                                         {{/if}}
                                                     </div>
                                                 </div>
@@ -112,7 +112,7 @@
                                                     {{/if}}
                                                     {{#if isGradient}}
                                                         <div id="gradient_{{../name}}_{{name}}" class="color_container gradient_container" style="background-image:linear-gradient({{gradientDirection}} {{#each gradient}},{{this}}{{/each}})">
-                                                            <div>{{name}}<br/>{{#each gradient}} {{this}}{{/each}}</div>
+                                                            <div>{{name}}<br/>{{#each gradient}}{{this}} {{/each}}</div>
                                                         </div>
                                                     {{/if}}
                                                 </div>
@@ -166,9 +166,10 @@
                     let image = $this.data("image");
                     let sizes = $this.data("sizes") || [];
                     let format = $this.data("format") || "png";
+                    let name = $this.data("name");
 
 
-                    showImageDownloadModal(brand, image, format, sizes);
+                    showImageDownloadModal(brand, image, format, sizes, name);
                 });
 
                 $(".image_preview_download_button").each(function () {
@@ -206,25 +207,27 @@
                 let $btn = $("#modal_image_download_button");
                 $btn.data("size", this.value);
                 $btn.attr("href", getImagePath($btn.data("brand"), $btn.data("image"), this.value, $btn.data("format")))
-                $btn.attr("download", $btn.data("image") + "." + $btn.data("format"))
+                $btn.attr("download", ($btn.data("name")||$btn.data("image")) + "." + $btn.data("format"))
             });
 
-            function showImageDownloadModal(brand, image, format, sizes) {
+            function showImageDownloadModal(brand, image, format, sizes, name) {
 
                 console.log("Open Download Modal");
                 console.log("brand: " + brand)
                 console.log("image: " + image);
                 console.log("sizes: " + sizes);
                 console.log("format: " + format);
+                console.log("name: " + name);
 
                 let btn = $("#modal_image_download_button");
                 btn.data("brand", brand);
                 btn.data("image", image);
                 btn.data("format", format || "png");
+                btn.data("name", name || image);
                 $("#modal_image_download_button").attr("href", getImagePath(brand, image,{{@root.previewSize}}, format));
-                $("#modal_image_download_button").attr("download", image + "." + format);
+                $("#modal_image_download_button").attr("download", (name||image) + "." + format);
 
-                $("#image_download_title").text(brand + " " + image);
+                $("#image_download_title").text(brand + " " + (name || image));
 
                 $("#image_download_size_select").empty();
                 for (let size of sizes) {

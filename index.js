@@ -31,6 +31,9 @@ async function doStuff() {
         let needsTabImage =true;
         for (let image of b.images) {
             image.id = cleanupId(image.file);
+            if (!image.name) {
+                image.name = image.id;
+            }
             image.hasSvg = false;
             image.sizes = [];
             for (let s of SIZES) {

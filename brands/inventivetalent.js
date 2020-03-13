@@ -2,16 +2,20 @@ module.exports = {
     url: "inventivetalent.dev",
     images: [
         {
+            name:"Logo Transparent",
             file: "flame-blender"
         },
         {
+            name:"Logo Dark Background",
             file: "flame-blender-bg",
             format: "png"
         },
         {
+            name:"Black Logo",
             file: "icon_black"
         },
         {
+            name:"Text Logo Transparent",
             file: "logo"
         }
     ],
