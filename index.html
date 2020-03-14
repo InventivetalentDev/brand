@@ -80,22 +80,22 @@
         <div>
             <div class="row">
                 <div class="col s12">
-                    <ul class="tabs z-depth-1">
+                    <ul class="tabs z-depth-1" id="brandTabs">
                             <li class="tab col s2">
-                                <a id="tab_link_inventivetalent" href="#tab_inventivetalent">inventivetalent</a>
+                                <a id="tab_link_inventivetalent" class="tab_link" data-brand="inventivetalent" href="#tab_inventivetalent">inventivetalent</a>
                             </li>
                             <li class="tab col s2">
-                                <a id="tab_link_minerender" href="#tab_minerender">minerender</a>
+                                <a id="tab_link_minerender" class="tab_link" data-brand="minerender" href="#tab_minerender">minerender</a>
                             </li>
                             <li class="tab col s2">
-                                <a id="tab_link_spiget" href="#tab_spiget">spiget</a>
+                                <a id="tab_link_spiget" class="tab_link" data-brand="spiget" href="#tab_spiget">spiget</a>
                             </li>
                             <li class="tab col s2">
-                                <a id="tab_link_trashapp" href="#tab_trashapp">trashapp</a>
+                                <a id="tab_link_trashapp" class="tab_link" data-brand="trashapp" href="#tab_trashapp">trashapp</a>
                             </li>
                     </ul>
                 </div>
-                    <div id="tab_inventivetalent" class="col s12">
+                    <div id="tab_inventivetalent" class="col s12 tab_content" data-brand="inventivetalent">
                         <div class="container">
                                 <div id="inventivetalent_images">
                                     <h3>Images</h3>
@@ -176,7 +176,7 @@
                                 </div>
                         </div>
                     </div>
-                    <div id="tab_minerender" class="col s12">
+                    <div id="tab_minerender" class="col s12 tab_content" data-brand="minerender">
                         <div class="container">
                                 <div id="minerender_images">
                                     <h3>Images</h3>
@@ -194,7 +194,7 @@
                                 </div>
                         </div>
                     </div>
-                    <div id="tab_spiget" class="col s12">
+                    <div id="tab_spiget" class="col s12 tab_content" data-brand="spiget">
                         <div class="container">
                                 <div id="spiget_images">
                                     <h3>Images</h3>
@@ -250,7 +250,7 @@
                                 </div>
                         </div>
                     </div>
-                    <div id="tab_trashapp" class="col s12">
+                    <div id="tab_trashapp" class="col s12 tab_content" data-brand="trashapp">
                         <div class="container">
                                 <div id="trashapp_images">
                                     <h3>Images</h3>
@@ -347,6 +347,13 @@
                 $('.tabs').tabs();
                 $('select').formSelect();
                 $('.modal').modal();
+
+                $(".tab_link").on("click",function () {
+                    window.location.hash = $(this).data("brand");
+                });
+                if (window.location.hash && window.location.hash.length > 2) {
+                    M.Tabs.getInstance(document.getElementById("brandTabs")).select("tab_"+window.location.hash.substring(1));
+                }
 
                 $(".img_modal_button").on("click", function (e) {
                     e.preventDefault();
