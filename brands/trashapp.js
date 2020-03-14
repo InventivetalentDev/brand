@@ -3,7 +3,7 @@ module.exports = {
     images: [
         {
             name:"Transparent Logo",
-            file: "trashcan-arrow"
+            file: "trashcan_arrow"
         },
         {
             name:"Green Background Logo",
