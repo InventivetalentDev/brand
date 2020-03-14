@@ -54,22 +54,22 @@
             }
         </style>
         <style>
-                    #tab_link_inventivetalent:before {
+                #tab_link_inventivetalent:before {
                     content: url(img/inventivetalent/flame-blender-x32.png);
                     vertical-align: -20%;
                     padding-right: 5px;
                 }
-                    #tab_link_minerender:before {
+                #tab_link_minerender:before {
                     content: url(img/minerender/minerender-x32.png);
                     vertical-align: -20%;
                     padding-right: 5px;
                 }
-                    #tab_link_spiget:before {
+                #tab_link_spiget:before {
                     content: url(img/spiget/logo_plain-x32.png);
                     vertical-align: -20%;
                     padding-right: 5px;
                 }
-                    #tab_link_trashapp:before {
+                #tab_link_trashapp:before {
                     content: url(img/trashapp/trashcan_arrow-x32.png);
                     vertical-align: -20%;
                     padding-right: 5px;
@@ -174,6 +174,18 @@
                                             </div>
                                     </div>
                                 </div>
+
+                            <div>
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                </a>
+                                <br/>
+                                <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">inventivetalent</span>
+                                by
+                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                is licensed under a
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                            </div>
                         </div>
                     </div>
                     <div id="tab_minerender" class="col s12 tab_content" data-brand="minerender">
@@ -192,6 +204,18 @@
                                             </div>
                                     </div>
                                 </div>
+
+                            <div>
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                </a>
+                                <br/>
+                                <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">minerender</span>
+                                by
+                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                is licensed under a
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                            </div>
                         </div>
                     </div>
                     <div id="tab_spiget" class="col s12 tab_content" data-brand="spiget">
@@ -248,6 +272,18 @@
                                             </div>
                                     </div>
                                 </div>
+
+                            <div>
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                </a>
+                                <br/>
+                                <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">spiget</span>
+                                by
+                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                is licensed under a
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                            </div>
                         </div>
                     </div>
                     <div id="tab_trashapp" class="col s12 tab_content" data-brand="trashapp">
@@ -312,6 +348,18 @@
                                             </div>
                                     </div>
                                 </div>
+
+                            <div>
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                </a>
+                                <br/>
+                                <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">trashapp</span>
+                                by
+                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                is licensed under a
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                            </div>
                         </div>
                     </div>
             </div>
@@ -348,11 +396,11 @@
                 $('select').formSelect();
                 $('.modal').modal();
 
-                $(".tab_link").on("click",function () {
+                $(".tab_link").on("click", function () {
                     window.location.hash = $(this).data("brand");
                 });
                 if (window.location.hash && window.location.hash.length > 2) {
-                    M.Tabs.getInstance(document.getElementById("brandTabs")).select("tab_"+window.location.hash.substring(1));
+                    M.Tabs.getInstance(document.getElementById("brandTabs")).select("tab_" + window.location.hash.substring(1));
                 }
 
                 $(".img_modal_button").on("click", function (e) {
@@ -404,7 +452,7 @@
                 let $btn = $("#modal_image_download_button");
                 $btn.data("size", this.value);
                 $btn.attr("href", getImagePath($btn.data("brand"), $btn.data("image"), this.value, $btn.data("format")))
-                $btn.attr("download", ($btn.data("name")||$btn.data("image")) + "." + $btn.data("format"))
+                $btn.attr("download", ($btn.data("name") || $btn.data("image")) + "." + $btn.data("format"))
             });
 
             function showImageDownloadModal(brand, image, format, sizes, name) {
@@ -422,7 +470,7 @@
                 btn.data("format", format || "png");
                 btn.data("name", name || image);
                 $("#modal_image_download_button").attr("href", getImagePath(brand, image,256, format));
-                $("#modal_image_download_button").attr("download", (name||image) + "." + format);
+                $("#modal_image_download_button").attr("download", (name || image) + "." + format);
 
                 $("#image_download_title").text(brand + " " + (name || image));
 

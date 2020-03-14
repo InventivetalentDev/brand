@@ -55,7 +55,7 @@
         </style>
         <style>
                 {{#each brands}}
-                    #tab_link_{{id}}:before {
+                #tab_link_{{id}}:before {
                     content: url({{tabImage}});
                     vertical-align: -20%;
                     padding-right: 5px;
@@ -121,6 +121,18 @@
                                     </div>
                                 </div>
                             {{/if}}
+
+                            <div>
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                </a>
+                                <br/>
+                                <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{name}}</span>
+                                by
+                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                is licensed under a
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                            </div>
                         </div>
                     </div>
                 {{/each}}
@@ -158,11 +170,11 @@
                 $('select').formSelect();
                 $('.modal').modal();
 
-                $(".tab_link").on("click",function () {
+                $(".tab_link").on("click", function () {
                     window.location.hash = $(this).data("brand");
                 });
                 if (window.location.hash && window.location.hash.length > 2) {
-                    M.Tabs.getInstance(document.getElementById("brandTabs")).select("tab_"+window.location.hash.substring(1));
+                    M.Tabs.getInstance(document.getElementById("brandTabs")).select("tab_" + window.location.hash.substring(1));
                 }
 
                 $(".img_modal_button").on("click", function (e) {
@@ -214,7 +226,7 @@
                 let $btn = $("#modal_image_download_button");
                 $btn.data("size", this.value);
                 $btn.attr("href", getImagePath($btn.data("brand"), $btn.data("image"), this.value, $btn.data("format")))
-                $btn.attr("download", ($btn.data("name")||$btn.data("image")) + "." + $btn.data("format"))
+                $btn.attr("download", ($btn.data("name") || $btn.data("image")) + "." + $btn.data("format"))
             });
 
             function showImageDownloadModal(brand, image, format, sizes, name) {
@@ -232,7 +244,7 @@
                 btn.data("format", format || "png");
                 btn.data("name", name || image);
                 $("#modal_image_download_button").attr("href", getImagePath(brand, image,{{@root.previewSize}}, format));
-                $("#modal_image_download_button").attr("download", (name||image) + "." + format);
+                $("#modal_image_download_button").attr("download", (name || image) + "." + format);
 
                 $("#image_download_title").text(brand + " " + (name || image));
 
