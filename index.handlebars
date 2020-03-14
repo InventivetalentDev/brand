@@ -5,6 +5,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
+            body {
+                overflow-x: hidden;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
             .color_container {
                 width: 150px;
                 height: 150px;
@@ -55,17 +61,25 @@
             }
         </style>
         <style>
+            /*@formatter:off*/
                 {{#each brands}}
-                #tab_link_{{id}}:before {
-                    content: url({{tabImage}});
-                    vertical-align: -20%;
-                    padding-right: 5px;
-                }
+                    #tab_link_{{id}}:before {
+                        content: url({{tabImage}});
+                        vertical-align: -20%;
+                        padding-right: 5px;
+                    }
                 {{/each}}
+             /*@formatter:on*/
         </style>
     </head>
     <body>
-        <div>
+        <div class="col s12">
+            <h1>Guidelines</h1>
+
+        </div>
+        <div class="divider"></div>
+        <div class="col s12">
+            <h1>Resources</h1>
             <div class="row">
                 <div class="col s12">
                     <ul class="tabs z-depth-1" id="brandTabs">
@@ -94,21 +108,21 @@
                                                         {{/if}}
                                                     </div>
                                                 </div>
-<!--                                                <div class="row">-->
-<!--                                                    <div class="col s12">-->
-<!--                                                        <ul>-->
-<!--                                                            {{#if hasPadding}}-->
-<!--                                                                <li>{{padding}}px padding</li>-->
-<!--                                                            {{/if}}-->
-<!--                                                            {{#if isDarkBackground}}-->
-<!--                                                                <li>Dark Background</li>-->
-<!--                                                            {{/if}}-->
-<!--                                                            {{#if isLightBackground}}-->
-<!--                                                                <li>Light Background</li>-->
-<!--                                                            {{/if}}-->
-<!--                                                        </ul>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
+                                                <!--                                                <div class="row">-->
+                                                <!--                                                    <div class="col s12">-->
+                                                <!--                                                        <ul>-->
+                                                    <!--                                                            {{#if hasPadding}}-->
+                                                <!--                                                                <li>{{padding}}px padding</li>-->
+                                                    <!--                                                            {{/if}}-->
+                                                    <!--                                                            {{#if isDarkBackground}}-->
+                                                <!--                                                                <li>Dark Background</li>-->
+                                                    <!--                                                            {{/if}}-->
+                                                    <!--                                                            {{#if isLightBackground}}-->
+                                                <!--                                                                <li>Light Background</li>-->
+                                                    <!--                                                            {{/if}}-->
+                                                <!--                                                        </ul>-->
+                                                <!--                                                    </div>-->
+                                                <!--                                                </div>-->
                                             </div>
                                         {{/each}}
                                     </div>
@@ -143,7 +157,7 @@
                                     <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
                                 </a>
                                 <br/>
-                                <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{name}}</span>
+                                <a href="https://{{url}}" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{name}}</a>
                                 by
                                 <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
                                 is licensed under a
