@@ -50,6 +50,10 @@ module.exports = {
         {
             name:"Black Background",
             color:"#282828"
+        },
+        {
+            name:"Theme Color",
+            color:"#298fa3"
         }
     ]
 };

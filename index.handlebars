@@ -94,7 +94,7 @@
                     <div id="tab_{{id}}" class="col s12 tab_content" data-brand="{{id}}">
                         <div class="container">
                             {{#if hasImages}}
-                                <div id="{{id}}_images">
+                                <div class="row" id="{{id}}_images">
                                     <h3>Images</h3>
                                     <div class="row">
                                         {{#each images}}
@@ -129,7 +129,7 @@
                                 </div>
                             {{/if}}
                             {{#if hasColors}}
-                                <div id="{{id}}_colors">
+                                <div class="row" id="{{id}}_colors">
                                     <h3>Colors</h3>
                                     <div class="row">
                                         {{#each colors}}
@@ -152,7 +152,7 @@
                                 </div>
                             {{/if}}
 
-                            <div>
+                            <div class="row">
                                 <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
                                     <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
                                 </a>
