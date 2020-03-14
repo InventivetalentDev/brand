@@ -64,6 +64,9 @@ async function doStuff() {
                 if (color.gradient) {
                     color.isGradient = true;
                 }
+                if (color.color && color.color.startsWith("#")) {
+                    color.color = color.color.toUpperCase();
+                }
             }
         }
 
