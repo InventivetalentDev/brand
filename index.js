@@ -29,37 +29,41 @@ async function doStuff() {
         b.hasColors = b.colors && b.colors.length>0;
 
         let needsTabImage =true;
-        for (let image of b.images) {
-            image.id = cleanupId(image.file);
-            if (!image.name) {
-                image.name = image.id;
-            }
-            image.hasSvg = false;
-            image.sizes = [];
-            for (let s of SIZES) {
-                if (fs.existsSync(path.join(__dirname, "img", b.name, image.file + "-x" + s + ".png"))) {
-                    image.sizes.push(s);
+        if(b.images) {
+            for (let image of b.images) {
+                image.id = cleanupId(image.file);
+                if (!image.name) {
+                    image.name = image.id;
+                }
+                image.hasSvg = false;
+                image.sizes = [];
+                for (let s of SIZES) {
+                    if (fs.existsSync(path.join(__dirname, "img", b.name, image.file + "-x" + s + ".png"))) {
+                        image.sizes.push(s);
 
-                    if(needsTabImage && TAB_SIZE===s) {
-                        needsTabImage = false;
-                        b.tabImage = "img/"+ b.name+"/"+ image.file + "-x" + TAB_SIZE + ".png"
+                        if (needsTabImage && TAB_SIZE === s) {
+                            needsTabImage = false;
+                            b.tabImage = "img/" + b.name + "/" + image.file + "-x" + TAB_SIZE + ".png"
+                        }
                     }
                 }
-            }
-            image.sizesStr = JSON.stringify(image.sizes);
-            if (fs.existsSync(path.join(__dirname, "img", b.name, image.file + "-svg.svg"))) {
-                image.hasSvg = true;
-            }
+                image.sizesStr = JSON.stringify(image.sizes);
+                if (fs.existsSync(path.join(__dirname, "img", b.name, image.file + "-svg.svg"))) {
+                    image.hasSvg = true;
+                }
 
 
+            }
         }
 
-        for (let color of b.colors) {
-            if (color.color) {
-                color.isColor = true;
-            }
-            if (color.gradient) {
-                color.isGradient = true;
+        if(b.colors) {
+            for (let color of b.colors) {
+                if (color.color) {
+                    color.isColor = true;
+                }
+                if (color.gradient) {
+                    color.isGradient = true;
+                }
             }
         }
 
