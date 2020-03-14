@@ -24,6 +24,14 @@
                 color: white;
             }
 
+            .img_col{
+                height: 350px;
+            }
+
+            .img_notice_list, .img_notice_list>li{
+                list-style-type: disc !important;
+            }
+
             .img_preview_container {
                 width: 100%;
                 position: relative;
@@ -98,7 +106,7 @@
                                     <h3>Images</h3>
                                     <div class="row">
                                         {{#each images}}
-                                            <div class="col s12 m6 l6 xl4">
+                                            <div class="col s12 m6 l6 xl4 img_col">
                                                 <div class="row">
                                                     <div class="img_preview_container" id="image_{{../name}}_{{id}}">
                                                         <img id="img_preview_{{id}}" src="img/{{../name}}/{{file}}-x{{@root.previewSize}}.png" width="{{@root.previewSize}}" alt="{{name}}" style="background-color:{{backgroundColor}}; padding: {{padding}}px;"/>
@@ -107,22 +115,18 @@
                                                             <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-name="{{name}}" data-format="svg">SVG</a>
                                                         {{/if}}
                                                     </div>
+                                                    <ul class="img_notice_list">
+                                                        {{#if hasPadding}}
+                                                            <li>{{padding}}px Padding</li>
+                                                        {{/if}}
+                                                        {{#if isDarkBackground}}
+                                                            <li>Dark Background</li>
+                                                        {{/if}}
+                                                        {{#if isLightBackground}}
+                                                            <li>Light Background</li>
+                                                        {{/if}}
+                                                    </ul>
                                                 </div>
-                                                <!--                                                <div class="row">-->
-                                                <!--                                                    <div class="col s12">-->
-                                                <!--                                                        <ul>-->
-                                                    <!--                                                            {{#if hasPadding}}-->
-                                                <!--                                                                <li>{{padding}}px padding</li>-->
-                                                    <!--                                                            {{/if}}-->
-                                                    <!--                                                            {{#if isDarkBackground}}-->
-                                                <!--                                                                <li>Dark Background</li>-->
-                                                    <!--                                                            {{/if}}-->
-                                                    <!--                                                            {{#if isLightBackground}}-->
-                                                <!--                                                                <li>Light Background</li>-->
-                                                    <!--                                                            {{/if}}-->
-                                                <!--                                                        </ul>-->
-                                                <!--                                                    </div>-->
-                                                <!--                                                </div>-->
                                             </div>
                                         {{/each}}
                                     </div>

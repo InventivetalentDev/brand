@@ -4,7 +4,8 @@ module.exports = {
         {
             name:"Transparent Logo",
             file: "vrknock",
-            padding: 20
+            padding: 20,
+            background: 'light'
         },
         {
           name:"Purple Background Logo",
@@ -15,7 +16,8 @@ module.exports = {
         {
             name:"Knocking Hand",
             file:"knocking_hand",
-            padding: 20
+            padding: 20,
+            background:'light'
         }
     ],
     colors:[

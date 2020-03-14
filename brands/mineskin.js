@@ -4,7 +4,8 @@ module.exports = {
         {
             name:"Logo",
             file: "mineskin",
-            padding: 20
+            padding: 20,
+            background: 'light'
         }
     ]
 };
