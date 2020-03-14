@@ -15,6 +15,10 @@ module.exports = {
             file: "icon_black"
         },
         {
+            name:"White Logo",
+            file: "icon_white"
+        },
+        {
             name:"Text Logo Transparent",
             file: "logo"
         }
