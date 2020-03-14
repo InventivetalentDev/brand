@@ -8,8 +8,9 @@ module.exports = {
         },
         {
             name:"Logo Dark Background",
-            file: "flame-blender-bg",
-            format: "png"
+            file: "flame-blender",
+            padding: 5,
+            background: "#282828"
         },
         {
             name:"Black Logo",

@@ -72,6 +72,11 @@
                         vertical-align: -20%;
                         padding-right: 5px;
                     }
+                    #tab_link_mineskin:before {
+                        content: url(img/mineskin/mineskin-x32.png);
+                        vertical-align: -20%;
+                        padding-right: 5px;
+                    }
                     #tab_link_spiget:before {
                         content: url(img/spiget/logo_plain-x32.png);
                         vertical-align: -20%;
@@ -79,6 +84,11 @@
                     }
                     #tab_link_trashapp:before {
                         content: url(img/trashapp/trashcan_arrow-x32.png);
+                        vertical-align: -20%;
+                        padding-right: 5px;
+                    }
+                    #tab_link_vrknock:before {
+                        content: url(img/vrknock/vrknock-x32.png);
                         vertical-align: -20%;
                         padding-right: 5px;
                     }
@@ -103,10 +113,16 @@
                                 <a id="tab_link_minerender" class="tab_link" data-brand="minerender" href="#tab_minerender">minerender</a>
                             </li>
                             <li class="tab col s2">
+                                <a id="tab_link_mineskin" class="tab_link" data-brand="mineskin" href="#tab_mineskin">mineskin</a>
+                            </li>
+                            <li class="tab col s2">
                                 <a id="tab_link_spiget" class="tab_link" data-brand="spiget" href="#tab_spiget">spiget</a>
                             </li>
                             <li class="tab col s2">
                                 <a id="tab_link_trashapp" class="tab_link" data-brand="trashapp" href="#tab_trashapp">trashapp</a>
+                            </li>
+                            <li class="tab col s2">
+                                <a id="tab_link_vrknock" class="tab_link" data-brand="vrknock" href="#tab_vrknock">vrknock</a>
                             </li>
                     </ul>
                 </div>
@@ -136,14 +152,16 @@
                                             </div>
                                             <div class="col s12 m6 l6 xl4">
                                                 <div class="row">
-                                                    <div class="img_preview_container" id="image_inventivetalent_flame-blender-bg">
-                                                        <img id="img_preview_flame-blender-bg" src="img/inventivetalent/flame-blender-bg-x256.png" width="256" alt="Logo Dark Background" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="flame-blender-bg" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo Dark Background">PNG</a>
+                                                    <div class="img_preview_container" id="image_inventivetalent_flame-blender">
+                                                        <img id="img_preview_flame-blender" src="img/inventivetalent/flame-blender-x256.png" width="256" alt="Logo Dark Background" style="background-color:#282828; padding: 5px;"/>
+                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="flame-blender" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo Dark Background">PNG</a>
                                                     </div>
                                                 </div>
                                                 <!--                                                <div class="row">-->
                                                 <!--                                                    <div class="col s12">-->
                                                 <!--                                                        <ul>-->
+                                                    <!--                                                            -->
+                                                <!--                                                                <li>5px padding</li>-->
                                                     <!--                                                            -->
                                                     <!--                                                            -->
                                                     <!--                                                            -->
@@ -282,9 +300,9 @@
                                             <div class="col s12 m6 l6 xl4">
                                                 <div class="row">
                                                     <div class="img_preview_container" id="image_minerender_minerender">
-                                                        <img id="img_preview_minerender" src="img/minerender/minerender-x256.png" width="256" alt="Plain Logo" style="background-color:#f5f5f5; padding: 20px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="minerender" data-image="minerender" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Plain Logo">PNG</a>
-                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="minerender" data-image="minerender" data-name="Plain Logo" data-format="svg">SVG</a>
+                                                        <img id="img_preview_minerender" src="img/minerender/minerender-x256.png" width="256" alt="Logo" style="background-color:#f5f5f5; padding: 20px;"/>
+                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="minerender" data-image="minerender" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo">PNG</a>
+                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="minerender" data-image="minerender" data-name="Logo" data-format="svg">SVG</a>
                                                     </div>
                                                 </div>
                                                 <!--                                                <div class="row">-->
@@ -315,6 +333,47 @@
                             </div>
                         </div>
                     </div>
+                    <div id="tab_mineskin" class="col s12 tab_content" data-brand="mineskin">
+                        <div class="container">
+                                <div class="row" id="mineskin_images">
+                                    <h3>Images</h3>
+                                    <div class="row">
+                                            <div class="col s12 m6 l6 xl4">
+                                                <div class="row">
+                                                    <div class="img_preview_container" id="image_mineskin_mineskin">
+                                                        <img id="img_preview_mineskin" src="img/mineskin/mineskin-x256.png" width="256" alt="Logo" style="background-color:#f5f5f5; padding: 20px;"/>
+                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="mineskin" data-image="mineskin" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo">PNG</a>
+                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="mineskin" data-image="mineskin" data-name="Logo" data-format="svg">SVG</a>
+                                                    </div>
+                                                </div>
+                                                <!--                                                <div class="row">-->
+                                                <!--                                                    <div class="col s12">-->
+                                                <!--                                                        <ul>-->
+                                                    <!--                                                            -->
+                                                <!--                                                                <li>20px padding</li>-->
+                                                    <!--                                                            -->
+                                                    <!--                                                            -->
+                                                    <!--                                                            -->
+                                                <!--                                                        </ul>-->
+                                                <!--                                                    </div>-->
+                                                <!--                                                </div>-->
+                                            </div>
+                                    </div>
+                                </div>
+
+                            <div class="row">
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                </a>
+                                <br/>
+                                <a href="https://mineskin.org" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">mineskin</a>
+                                by
+                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                is licensed under a
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                            </div>
+                        </div>
+                    </div>
                     <div id="tab_spiget" class="col s12 tab_content" data-brand="spiget">
                         <div class="container">
                                 <div class="row" id="spiget_images">
@@ -323,7 +382,7 @@
                                             <div class="col s12 m6 l6 xl4">
                                                 <div class="row">
                                                     <div class="img_preview_container" id="image_spiget_logo_plain">
-                                                        <img id="img_preview_logo_plain" src="img/spiget/logo_plain-x256.png" width="256" alt="Plain Logo" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                        <img id="img_preview_logo_plain" src="img/spiget/logo_plain-x256.png" width="256" alt="Plain Logo" style="background-color:#f5f5f5; padding: 10px;"/>
                                                         <a href="#" class="image_preview_download_button img_modal_button" data-brand="spiget" data-image="logo_plain" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Plain Logo">PNG</a>
                                                             <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="spiget" data-image="logo_plain" data-name="Plain Logo" data-format="svg">SVG</a>
                                                     </div>
@@ -341,7 +400,7 @@
                                             <div class="col s12 m6 l6 xl4">
                                                 <div class="row">
                                                     <div class="img_preview_container" id="image_spiget_logo_text_center">
-                                                        <img id="img_preview_logo_text_center" src="img/spiget/logo_text_center-x256.png" width="256" alt="Center Text Logo" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                        <img id="img_preview_logo_text_center" src="img/spiget/logo_text_center-x256.png" width="256" alt="Center Text Logo" style="background-color:#f5f5f5; padding: 10px;"/>
                                                         <a href="#" class="image_preview_download_button img_modal_button" data-brand="spiget" data-image="logo_text_center" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Center Text Logo">PNG</a>
                                                             <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="spiget" data-image="logo_text_center" data-name="Center Text Logo" data-format="svg">SVG</a>
                                                     </div>
@@ -359,7 +418,7 @@
                                             <div class="col s12 m6 l6 xl4">
                                                 <div class="row">
                                                     <div class="img_preview_container" id="image_spiget_logo_text">
-                                                        <img id="img_preview_logo_text" src="img/spiget/logo_text-x256.png" width="256" alt="Text Logo" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                        <img id="img_preview_logo_text" src="img/spiget/logo_text-x256.png" width="256" alt="Text Logo" style="background-color:#f5f5f5; padding: 10px;"/>
                                                         <a href="#" class="image_preview_download_button img_modal_button" data-brand="spiget" data-image="logo_text" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Text Logo">PNG</a>
                                                             <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="spiget" data-image="logo_text" data-name="Text Logo" data-format="svg">SVG</a>
                                                     </div>
@@ -377,7 +436,7 @@
                                             <div class="col s12 m6 l6 xl4">
                                                 <div class="row">
                                                     <div class="img_preview_container" id="image_spiget_wide">
-                                                        <img id="img_preview_wide" src="img/spiget/wide-x256.png" width="256" alt="Wide Text Logo" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                        <img id="img_preview_wide" src="img/spiget/wide-x256.png" width="256" alt="Wide Text Logo" style="background-color:#f5f5f5; padding: 10px;"/>
                                                         <a href="#" class="image_preview_download_button img_modal_button" data-brand="spiget" data-image="wide" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Wide Text Logo">PNG</a>
                                                     </div>
                                                 </div>
@@ -427,7 +486,7 @@
                                             <div class="col s12 m6 l6 xl4">
                                                 <div class="row">
                                                     <div class="img_preview_container" id="image_trashapp_trashcan_arrow">
-                                                        <img id="img_preview_trashcan_arrow" src="img/trashapp/trashcan_arrow-x256.png" width="256" alt="Transparent Logo" style="background-color:#f5f5f5; padding: 20px;"/>
+                                                        <img id="img_preview_trashcan_arrow" src="img/trashapp/trashcan_arrow-x256.png" width="256" alt="Transparent Logo" style="background-color:#f5f5f5; padding: 30px;"/>
                                                         <a href="#" class="image_preview_download_button img_modal_button" data-brand="trashapp" data-image="trashcan_arrow" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Transparent Logo">PNG</a>
                                                             <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="trashapp" data-image="trashcan_arrow" data-name="Transparent Logo" data-format="svg">SVG</a>
                                                     </div>
@@ -436,7 +495,7 @@
                                                 <!--                                                    <div class="col s12">-->
                                                 <!--                                                        <ul>-->
                                                     <!--                                                            -->
-                                                <!--                                                                <li>20px padding</li>-->
+                                                <!--                                                                <li>30px padding</li>-->
                                                     <!--                                                            -->
                                                     <!--                                                            -->
                                                     <!--                                                            -->
@@ -446,33 +505,17 @@
                                             </div>
                                             <div class="col s12 m6 l6 xl4">
                                                 <div class="row">
-                                                    <div class="img_preview_container" id="image_trashapp_icon-without-shadow">
-                                                        <img id="img_preview_icon-without-shadow" src="img/trashapp/icon-without-shadow-x256.png" width="256" alt="Green Background Logo" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="trashapp" data-image="icon-without-shadow" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Green Background Logo">PNG</a>
-                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="trashapp" data-image="icon-without-shadow" data-name="Green Background Logo" data-format="svg">SVG</a>
+                                                    <div class="img_preview_container" id="image_trashapp_trashcan_arrow">
+                                                        <img id="img_preview_trashcan_arrow" src="img/trashapp/trashcan_arrow-x256.png" width="256" alt="Green Background Logo" style="background-color:#689f38; padding: 30px;"/>
+                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="trashapp" data-image="trashcan_arrow" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Green Background Logo">PNG</a>
+                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="trashapp" data-image="trashcan_arrow" data-name="Green Background Logo" data-format="svg">SVG</a>
                                                     </div>
                                                 </div>
                                                 <!--                                                <div class="row">-->
                                                 <!--                                                    <div class="col s12">-->
                                                 <!--                                                        <ul>-->
                                                     <!--                                                            -->
-                                                    <!--                                                            -->
-                                                    <!--                                                            -->
-                                                <!--                                                        </ul>-->
-                                                <!--                                                    </div>-->
-                                                <!--                                                </div>-->
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4">
-                                                <div class="row">
-                                                    <div class="img_preview_container" id="image_trashapp_icon">
-                                                        <img id="img_preview_icon" src="img/trashapp/icon-x256.png" width="256" alt="Green Background Logo with Shadow" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="trashapp" data-image="icon" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Green Background Logo with Shadow">PNG</a>
-                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="trashapp" data-image="icon" data-name="Green Background Logo with Shadow" data-format="svg">SVG</a>
-                                                    </div>
-                                                </div>
-                                                <!--                                                <div class="row">-->
-                                                <!--                                                    <div class="col s12">-->
-                                                <!--                                                        <ul>-->
+                                                <!--                                                                <li>30px padding</li>-->
                                                     <!--                                                            -->
                                                     <!--                                                            -->
                                                     <!--                                                            -->
@@ -507,15 +550,15 @@
                                     <div class="row">
                                             <div class="col s12 m4 l3 xl3">
                                                 <div class="row">
-                                                        <div id="color_trashapp_Green" class="color_container" style="background-color:#689F38">
-                                                            <div>Green<br/>#689F38</div>
+                                                        <div id="color_trashapp_Green Background" class="color_container" style="background-color:#689F38">
+                                                            <div>Green Background<br/>#689F38</div>
                                                         </div>
                                                 </div>
                                             </div>
                                             <div class="col s12 m4 l3 xl3">
                                                 <div class="row">
-                                                        <div id="color_trashapp_Purple" class="color_container" style="background-color:#283593">
-                                                            <div>Purple<br/>#283593</div>
+                                                        <div id="color_trashapp_Blue" class="color_container" style="background-color:#283593">
+                                                            <div>Blue<br/>#283593</div>
                                                         </div>
                                                 </div>
                                             </div>
@@ -528,6 +571,106 @@
                                 </a>
                                 <br/>
                                 <a href="https://trashapp.cc" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">trashapp</a>
+                                by
+                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                is licensed under a
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab_vrknock" class="col s12 tab_content" data-brand="vrknock">
+                        <div class="container">
+                                <div class="row" id="vrknock_images">
+                                    <h3>Images</h3>
+                                    <div class="row">
+                                            <div class="col s12 m6 l6 xl4">
+                                                <div class="row">
+                                                    <div class="img_preview_container" id="image_vrknock_vrknock">
+                                                        <img id="img_preview_vrknock" src="img/vrknock/vrknock-x256.png" width="256" alt="Transparent Logo" style="background-color:#f5f5f5; padding: 20px;"/>
+                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="vrknock" data-image="vrknock" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Transparent Logo">PNG</a>
+                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="vrknock" data-image="vrknock" data-name="Transparent Logo" data-format="svg">SVG</a>
+                                                    </div>
+                                                </div>
+                                                <!--                                                <div class="row">-->
+                                                <!--                                                    <div class="col s12">-->
+                                                <!--                                                        <ul>-->
+                                                    <!--                                                            -->
+                                                <!--                                                                <li>20px padding</li>-->
+                                                    <!--                                                            -->
+                                                    <!--                                                            -->
+                                                    <!--                                                            -->
+                                                <!--                                                        </ul>-->
+                                                <!--                                                    </div>-->
+                                                <!--                                                </div>-->
+                                            </div>
+                                            <div class="col s12 m6 l6 xl4">
+                                                <div class="row">
+                                                    <div class="img_preview_container" id="image_vrknock_vrknock">
+                                                        <img id="img_preview_vrknock" src="img/vrknock/vrknock-x256.png" width="256" alt="Purple Background Logo" style="background-color:#8423c3; padding: 20px;"/>
+                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="vrknock" data-image="vrknock" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Purple Background Logo">PNG</a>
+                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="vrknock" data-image="vrknock" data-name="Purple Background Logo" data-format="svg">SVG</a>
+                                                    </div>
+                                                </div>
+                                                <!--                                                <div class="row">-->
+                                                <!--                                                    <div class="col s12">-->
+                                                <!--                                                        <ul>-->
+                                                    <!--                                                            -->
+                                                <!--                                                                <li>20px padding</li>-->
+                                                    <!--                                                            -->
+                                                    <!--                                                            -->
+                                                    <!--                                                            -->
+                                                <!--                                                        </ul>-->
+                                                <!--                                                    </div>-->
+                                                <!--                                                </div>-->
+                                            </div>
+                                            <div class="col s12 m6 l6 xl4">
+                                                <div class="row">
+                                                    <div class="img_preview_container" id="image_vrknock_knocking_hand">
+                                                        <img id="img_preview_knocking_hand" src="img/vrknock/knocking_hand-x256.png" width="256" alt="Knocking Hand" style="background-color:#f5f5f5; padding: 20px;"/>
+                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="vrknock" data-image="knocking_hand" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Knocking Hand">PNG</a>
+                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="vrknock" data-image="knocking_hand" data-name="Knocking Hand" data-format="svg">SVG</a>
+                                                    </div>
+                                                </div>
+                                                <!--                                                <div class="row">-->
+                                                <!--                                                    <div class="col s12">-->
+                                                <!--                                                        <ul>-->
+                                                    <!--                                                            -->
+                                                <!--                                                                <li>20px padding</li>-->
+                                                    <!--                                                            -->
+                                                    <!--                                                            -->
+                                                    <!--                                                            -->
+                                                <!--                                                        </ul>-->
+                                                <!--                                                    </div>-->
+                                                <!--                                                </div>-->
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="vrknock_colors">
+                                    <h3>Colors</h3>
+                                    <div class="row">
+                                            <div class="col s12 m4 l3 xl3">
+                                                <div class="row">
+                                                        <div id="color_vrknock_Gray" class="color_container" style="background-color:#BABABA">
+                                                            <div>Gray<br/>#BABABA</div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col s12 m4 l3 xl3">
+                                                <div class="row">
+                                                        <div id="color_vrknock_Purple Background" class="color_container" style="background-color:#8423C3">
+                                                            <div>Purple Background<br/>#8423C3</div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+
+                            <div class="row">
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                </a>
+                                <br/>
+                                <a href="https://vrknock.app" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">vrknock</a>
                                 by
                                 <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
                                 is licensed under a

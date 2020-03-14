@@ -4,16 +4,18 @@ module.exports = {
         {
             name:"Transparent Logo",
             file: "trashcan_arrow",
-            padding: 20
+            padding: 30
         },
         {
             name:"Green Background Logo",
-            file:"icon-without-shadow"
+            file:"trashcan_arrow",
+            background: "#689f38",
+            padding: 30
         },
-        {
-            name:"Green Background Logo with Shadow",
-            file:"icon"
-        },
+        // {
+        //     name:"Green Background Logo with Shadow",
+        //     file:"icon"
+        // },
         {
             name:"Plain Trashcan",
             file:"trashcan",
@@ -22,11 +24,11 @@ module.exports = {
     ],
     colors: [
         {
-            name:"Green",
+            name:"Green Background",
             color: "#689f38"
         },
         {
-            name:"Purple",
+            name:"Blue",
             color:"#283593"
         }
     ]

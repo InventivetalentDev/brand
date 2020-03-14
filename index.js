@@ -59,10 +59,12 @@ async function doStuff() {
                     } else if (image.background === "dark") {
                         image.backgroundColor = "#0a0a0a"
                         image.isDarkBackground = true;
+                    }else{
+                        image.backgroundColor = image.background;
                     }
                 }
                 if(!image.padding){
-                    image.padding=0;
+                    image.padding=10;
                 }else{
                     image.hasPadding = true;
                 }

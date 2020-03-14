@@ -1,9 +1,9 @@
 module.exports = {
-    url: "minerender.org",
+    url: "mineskin.org",
     images: [
         {
             name:"Logo",
-            file: "minerender",
+            file: "mineskin",
             padding: 20
         }
     ]
