@@ -3,7 +3,8 @@ module.exports = {
     images: [
         {
             name:"Transparent Logo",
-            file: "trashcan_arrow"
+            file: "trashcan_arrow",
+            padding: 20
         },
         {
             name:"Green Background Logo",
@@ -15,7 +16,8 @@ module.exports = {
         },
         {
             name:"Plain Trashcan",
-            file:"trashcan"
+            file:"trashcan",
+            padding: 20
         }
     ],
     colors: [

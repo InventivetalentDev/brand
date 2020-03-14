@@ -3,7 +3,8 @@ module.exports = {
     images: [
         {
             name:"Plain Logo",
-            file: "minerender"
+            file: "minerender",
+            padding: 20
         }
     ]
 };

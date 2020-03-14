@@ -3,7 +3,8 @@ module.exports = {
     images: [
         {
             name:"Logo Transparent",
-            file: "flame-blender"
+            file: "flame-blender",
+            padding: 5
         },
         {
             name:"Logo Dark Background",
@@ -12,15 +13,19 @@ module.exports = {
         },
         {
             name:"Black Logo",
-            file: "icon_black"
+            file: "icon_black",
+            padding: 5
         },
         {
             name:"White Logo",
-            file: "icon_white"
+            file: "icon_white",
+            background: "dark",
+            padding: 5
         },
         {
             name:"Text Logo Transparent",
-            file: "logo"
+            file: "logo",
+            padding: 5
         }
     ],
     colors: [

@@ -52,7 +52,20 @@ async function doStuff() {
                     image.hasSvg = true;
                 }
 
-
+                if(!image.backgroundColor) {
+                    if (!image.background || image.background === "light") {
+                        image.backgroundColor = "#f5f5f5"
+                        image.isLightBackground = image.background === "light";
+                    } else if (image.background === "dark") {
+                        image.backgroundColor = "#0a0a0a"
+                        image.isDarkBackground = true;
+                    }
+                }
+                if(!image.padding){
+                    image.padding=0;
+                }else{
+                    image.hasPadding = true;
+                }
             }
         }
 
