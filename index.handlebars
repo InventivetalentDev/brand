@@ -67,6 +67,10 @@
                 top: 5px;
                 left: 85px;
             }
+
+            .tabs .tab a{
+                padding: 0 2px;
+            }
         </style>
         <style>
             /*@formatter:off*/
@@ -92,7 +96,7 @@
                 <div class="col s12">
                     <ul class="tabs z-depth-1" id="brandTabs">
                         {{#each brands}}
-                            <li class="tab col s2">
+                            <li class="tab col s1">
                                 <a id="tab_link_{{id}}" class="tab_link" data-brand="{{id}}" href="#tab_{{id}}">{{name}}</a>
                             </li>
                         {{/each}}
