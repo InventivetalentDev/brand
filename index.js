@@ -66,7 +66,7 @@ async function doStuff() {
                 }else{
                     image.isCustomBackground  =true;
                 }
-                if(!image.padding){
+                if(typeof image.padding==="undefined"){
                     image.padding=10;
                 }else{
                     image.hasPadding = true;

@@ -110,9 +110,10 @@
                                                 <div class="row">
                                                     <div class="img_preview_container" id="image_{{../name}}_{{id}}">
                                                         <img id="img_preview_{{id}}" src="img/{{../name}}/{{file}}-x{{@root.previewSize}}.png" width="{{@root.previewSize}}" alt="{{name}}" style="background-color:{{backgroundColor}}; padding: {{padding}}px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="{{sizesStr}}" data-name="{{name}}">PNG</a>
+                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="{{sizesStr}}" data-name="{{name}}" data-format="png">PNG</a>
                                                         {{#if hasSvg}}
-                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-name="{{name}}" data-format="svg">SVG</a>
+<!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-name="{{name}}" data-format="svg">SVG</a>-->
+                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="[]" data-name="{{name}}" data-format="svg">SVG</a>
                                                         {{/if}}
                                                     </div>
                                                     <ul class="img_notice_list">
@@ -184,14 +185,18 @@
             <div class="modal-content">
                 <h4>Download Image</h4>
                 <div>
-                    <span id="image_download_title"></span>
-
+                    <h5 id="image_download_title"></h5>
                     <br/>
 
-                    <div class="input-field col s12">
+                    <div class="input-field col s12" id="modal_size_select_wrapper">
                         <select id="image_download_size_select">
                         </select>
                         <label>Size</label>
+                    </div>
+                    <br/>
+                    <div class="input-field col s12" >
+                        <input id="image_cdn_url" type="url" readonly class="active" value="https://inventivetalent.dev">
+                        <label>CDN URL</label>
                     </div>
 
                     <a class="btn image_download_btn" target="_blank" id="modal_image_download_button" data-brand="" data-image="" data-size="{{@root.previewSize}}" data-format="png" href="#" download>Download</a>
@@ -252,6 +257,14 @@
 
             });
 
+            function getDownloadImagePath(brand, image, size, format) {
+                return "img/"+ getImagePath(brand, image, size, format);
+            }
+
+            function getCdnImagePath(brand, image, size, format) {
+                return "https://res.cloudinary.com/inventivetalent/image/upload/brand/" + getImagePath(brand, image, size, format);
+            }
+
             function getImagePath(brand, image, size, format) {
                 let file = image;
                 if (format === "png") {
@@ -259,19 +272,29 @@
                 } else if (format === "svg") {
                     file += "-svg.svg";
                 }
-                return "https://res.cloudinary.com/inventivetalent/image/upload/brand/" + brand + "/" + file;
+                return brand + "/" + file;
             }
 
             $("#image_download_size_select").on("change", function () {
                 console.log("change");
                 let $btn = $("#modal_image_download_button");
-                $btn.data("size", this.value);
-                $btn.attr("href", getImagePath($btn.data("brand"), $btn.data("image"), this.value, $btn.data("format")))
-                $btn.attr("download", ($btn.data("name") || $btn.data("image")) + "." + $btn.data("format"))
+                let size = this.value;
+                $btn.data("size", size);
+
+                let brand = $btn.data("brand");
+                let image = $btn.data("image");
+                let name = $btn.data("name");
+                let format = $btn.data("format");
+
+                let downloadPath = getDownloadImagePath(brand, image,size, format);
+                let cdnPath = getCdnImagePath(brand, image,size, format);
+
+                $btn.attr("href", downloadPath);
+                $btn.attr("download", (name || image) + "." + format);
+                $("#image_cdn_url").val(cdnPath);
             });
 
             function showImageDownloadModal(brand, image, format, sizes, name) {
-
                 console.log("Open Download Modal");
                 console.log("brand: " + brand)
                 console.log("image: " + image);
@@ -284,16 +307,27 @@
                 btn.data("image", image);
                 btn.data("format", format || "png");
                 btn.data("name", name || image);
-                $("#modal_image_download_button").attr("href", getImagePath(brand, image,{{@root.previewSize}}, format));
-                $("#modal_image_download_button").attr("download", (name || image) + "." + format);
+
+                let downloadPath = getDownloadImagePath(brand, image,{{@root.previewSize}}, format);
+                let cdnPath = getCdnImagePath(brand, image,{{@root.previewSize}}, format);
+
+                btn.attr("href", downloadPath);
+                $("#image_cdn_url").val(cdnPath);
+                btn.attr("download", (name || image) + "." + format);
+                btn.text("Download (." + format + ")");
 
                 $("#image_download_title").text(brand + " " + (name || image));
 
-                $("#image_download_size_select").empty();
-                for (let size of sizes) {
-                    $("#image_download_size_select").append("<option value='" + size + "' " + (size ==={{@root.previewSize}}? "selected" : "") + ">" + size + "</option>");
+                if(sizes&&sizes.length>0) {
+                    $("#modal_size_select_wrapper").show()
+                    $("#image_download_size_select").empty();
+                    for (let size of sizes) {
+                        $("#image_download_size_select").append("<option value='" + size + "' " + (size ==={{@root.previewSize}}? "selected" : "") + ">" + size + "</option>");
+                    }
+                    $("#image_download_size_select").formSelect();
+                }else{
+                    $("#modal_size_select_wrapper").hide()
                 }
-                $("#image_download_size_select").formSelect();
 
                 M.Modal.getInstance(document.getElementById("image_download_modal")).open();
             }
