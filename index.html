@@ -67,10 +67,6 @@
                 top: 5px;
                 left: 85px;
             }
-
-            .tabs .tab a{
-                padding: 0 2px;
-            }
         </style>
         <style>
             /*@formatter:off*/
@@ -716,7 +712,7 @@
                 } else if (format === "svg") {
                     file += "-svg.svg";
                 }
-                return "img/" + brand + "/" + file;
+                return "https://res.cloudinary.com/inventivetalent/image/upload/brand/" + brand + "/" + file;
             }
 
             $("#image_download_size_select").on("change", function () {
