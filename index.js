@@ -27,6 +27,7 @@ async function doStuff() {
 
         b.hasImages = b.images && b.images.length>0;
         b.hasColors = b.colors && b.colors.length>0;
+        b.hasFonts = b.fonts && b.fonts.length >0;
 
         let needsTabImage =true;
         if(b.images) {

@@ -24,11 +24,11 @@
                 color: white;
             }
 
-            .img_col{
+            .img_col {
                 height: 370px;
             }
 
-            .img_notice_list, .img_notice_list>li{
+            .img_notice_list, .img_notice_list > li {
                 list-style-type: disc !important;
             }
 
@@ -66,6 +66,14 @@
             .img_preview_container > a:nth-of-type(3) {
                 top: 5px;
                 left: 85px;
+            }
+
+            .font_container{
+                font-size: 50pt;
+            }
+            .font_container a{
+                text-decoration: none;
+                color: black;
             }
         </style>
         <style>
@@ -113,7 +121,7 @@
                                                         <img id="img_preview_{{id}}" src="img/{{../name}}/{{file}}-x{{@root.previewSize}}.png" width="{{@root.previewSize}}" alt="{{name}}" style="background-color:{{backgroundColor}}; padding: {{padding}}px;"/>
                                                         <a href="#" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="{{sizesStr}}" data-name="{{name}}" data-format="png">PNG</a>
                                                         {{#if hasSvg}}
-<!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-name="{{name}}" data-format="svg">SVG</a>-->
+                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-name="{{name}}" data-format="svg">SVG</a>-->
                                                             <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="[]" data-name="{{name}}" data-format="svg">SVG</a>
                                                         {{/if}}
                                                     </div>
@@ -160,6 +168,30 @@
                                     </div>
                                 </div>
                             {{/if}}
+                            {{#if hasFonts}}
+                                <div class="row" id="{{id}}_fonts">
+                                    <h3>Fonts</h3>
+                                    <div class="row">
+                                        {{#each fonts}}
+                                            <style>
+                                                /*@formatter:off*/
+                                                @font-face {
+                                                    font-family: {{family}};
+                                                    src: url(fonts/{{family}}.ttf);
+                                                }
+                                                /*@formatter:on*/
+                                            </style>
+                                            <div class="col s12 m8 l6 xl5">
+                                                <div class="row">
+                                                    <div id="font_{{../name}}_{{family}}" class="font_container" style="font-family:{{family}};">
+                                                       <a href="{{url}}" target="_blank">{{family}}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            {{/if}}
 
                             <div class="row">
                                 <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
@@ -195,7 +227,7 @@
                         <label>Size</label>
                     </div>
                     <br/>
-                    <div class="input-field col s12" >
+                    <div class="input-field col s12">
                         <input id="image_cdn_url" type="url" readonly class="active" value="https://inventivetalent.dev">
                         <label>CDN URL</label>
                     </div>
@@ -259,7 +291,7 @@
             });
 
             function getDownloadImagePath(brand, image, size, format) {
-                return "img/"+ getImagePath(brand, image, size, format);
+                return "img/" + getImagePath(brand, image, size, format);
             }
 
             function getCdnImagePath(brand, image, size, format) {
@@ -287,8 +319,8 @@
                 let name = $btn.data("name");
                 let format = $btn.data("format");
 
-                let downloadPath = getDownloadImagePath(brand, image,size, format);
-                let cdnPath = getCdnImagePath(brand, image,size, format);
+                let downloadPath = getDownloadImagePath(brand, image, size, format);
+                let cdnPath = getCdnImagePath(brand, image, size, format);
 
                 $btn.attr("href", downloadPath);
                 $btn.attr("download", (name || image) + "." + format);
@@ -319,14 +351,14 @@
 
                 $("#image_download_title").text(brand + " " + (name || image));
 
-                if(sizes&&sizes.length>0) {
+                if (sizes && sizes.length > 0) {
                     $("#modal_size_select_wrapper").show()
                     $("#image_download_size_select").empty();
                     for (let size of sizes) {
                         $("#image_download_size_select").append("<option value='" + size + "' " + (size ==={{@root.previewSize}}? "selected" : "") + ">" + size + "</option>");
                     }
                     $("#image_download_size_select").formSelect();
-                }else{
+                } else {
                     $("#modal_size_select_wrapper").hide()
                 }
 

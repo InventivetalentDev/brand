@@ -56,5 +56,11 @@ module.exports = {
             name:"Gray",
             color:"#353535"
         }
+    ],
+    fonts:[
+        {
+            family:"Archistico",
+            url:"https://www.archistico.com/product/font-archistico/"
+        }
     ]
 };
