@@ -75,6 +75,19 @@
                 text-decoration: none;
                 color: black;
             }
+
+            #guideline_container{
+                font-size: 18px;
+            }
+        </style>
+        <style>
+            /* https://coderwall.com/p/hkgamw/creating-full-width-100-container-inside-fixed-width-container */
+            .row-full {
+                width: 90vw;
+                position: relative;
+                margin-left: -45vw;
+                left: 50%;
+            }
         </style>
         <style>
             /*@formatter:off*/
@@ -122,751 +135,779 @@
         </style>
     </head>
     <body>
-        <div class="col s12">
-            <h1>Guidelines</h1>
-
-        </div>
-        <div class="divider"></div>
-        <div class="col s12">
-            <h1>Resources</h1>
-            <div class="row">
+        <div class="container">
+            <div class="section row-full">
                 <div class="col s12">
-                    <ul class="tabs z-depth-1" id="brandTabs">
-                            <li class="tab">
-                                <a id="tab_link_inventivetalent" class="tab_link" data-brand="inventivetalent" href="#tab_inventivetalent">inventivetalent</a>
-                            </li>
-                            <li class="tab">
-                                <a id="tab_link_mcassets" class="tab_link" data-brand="mcassets" href="#tab_mcassets">MCAssets</a>
-                            </li>
-                            <li class="tab">
-                                <a id="tab_link_minerender" class="tab_link" data-brand="minerender" href="#tab_minerender">MineRender</a>
-                            </li>
-                            <li class="tab">
-                                <a id="tab_link_mineskin" class="tab_link" data-brand="mineskin" href="#tab_mineskin">MineSkin</a>
-                            </li>
-                            <li class="tab">
-                                <a id="tab_link_pluginblueprint" class="tab_link" data-brand="pluginblueprint" href="#tab_pluginblueprint">PluginBlueprint</a>
-                            </li>
-                            <li class="tab">
-                                <a id="tab_link_spiget" class="tab_link" data-brand="spiget" href="#tab_spiget">Spiget</a>
-                            </li>
-                            <li class="tab">
-                                <a id="tab_link_trashapp" class="tab_link" data-brand="trashapp" href="#tab_trashapp">TrashApp</a>
-                            </li>
-                            <li class="tab">
-                                <a id="tab_link_vrknock" class="tab_link" data-brand="vrknock" href="#tab_vrknock">VRKnock</a>
-                            </li>
-                    </ul>
+                    <h1>Guidelines</h1>
+
+                    <div id="guideline_container">
+                        <div class="row">
+                            <strong class="do">Do</strong> use the provided logos, images and other resources to refer to the respective projects
+                        </div>
+                        <div class="row">
+                            <strong class="do">Do</strong> keep appropriate padding around images and make sure they don't clip into other elements
+                        </div>
+                        <div class="row">
+                            <strong class="do">Do</strong> link back to the respective project websites where possible
+                        </div>
+                        <div class="row">
+                            <strong class="do">Do</strong> use appropriate sizes for images to ensure their content is properly visible
+                        </div>
+
+                        <div class="row">
+                            <strong class="dont">Don't</strong> modify the images in any way that alters their shape, proportion, color or orientation
+                        </div>
+                        <div class="row">
+                            <strong class="dont">Don't</strong> change the color scheme. Use the colors provided below
+                        </div>
+                    </div>
                 </div>
-                    <div id="tab_inventivetalent" class="col s12 tab_content" data-brand="inventivetalent">
-                        <div class="container">
-                                <div class="row" id="inventivetalent_images">
-                                    <h3>Images</h3>
-                                    <div class="row">
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Logo Transparent</h6>
-                                                    <div class="img_preview_container" id="image_inventivetalent_flame-blender">
-                                                        <img id="img_preview_flame-blender" src="img/inventivetalent/flame-blender-x256.png" width="256" alt="Logo Transparent" style="background-color:#f5f5f5; padding: 5px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="flame-blender" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo Transparent" data-format="png">PNG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>5px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Logo Dark Background</h6>
-                                                    <div class="img_preview_container" id="image_inventivetalent_flame-blender">
-                                                        <img id="img_preview_flame-blender" src="img/inventivetalent/flame-blender-x256.png" width="256" alt="Logo Dark Background" style="background-color:#282828; padding: 5px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="flame-blender" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo Dark Background" data-format="png">PNG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>5px Padding</li>
-                                                            <li>Background: #282828</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Black Logo</h6>
-                                                    <div class="img_preview_container" id="image_inventivetalent_icon_black">
-                                                        <img id="img_preview_icon_black" src="img/inventivetalent/icon_black-x256.png" width="256" alt="Black Logo" style="background-color:#f5f5f5; padding: 5px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="icon_black" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Black Logo" data-format="png">PNG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>5px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>White Logo</h6>
-                                                    <div class="img_preview_container" id="image_inventivetalent_icon_white">
-                                                        <img id="img_preview_icon_white" src="img/inventivetalent/icon_white-x256.png" width="256" alt="White Logo" style="background-color:#0a0a0a; padding: 5px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="icon_white" data-sizes="[32,64,128,256,512,1024,2048]" data-name="White Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="inventivetalent" data-image="icon_white" data-name="White Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="icon_white" data-sizes="[]" data-name="White Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>5px Padding</li>
-                                                            <li>Dark Background</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Text Logo Transparent</h6>
-                                                    <div class="img_preview_container" id="image_inventivetalent_logo">
-                                                        <img id="img_preview_logo" src="img/inventivetalent/logo-x256.png" width="256" alt="Text Logo Transparent" style="background-color:#f5f5f5; padding: 5px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="logo" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Text Logo Transparent" data-format="png">PNG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>5px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-                                <div class="row" id="inventivetalent_colors">
-                                    <h3>Colors</h3>
-                                    <div class="row">
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="gradient_inventivetalent_Flame Left" class="color_container gradient_container" style="background-image:linear-gradient(to bottom ,#08BED5,#199FD5)">
-                                                            <div>Flame Left<br/>#08BED5 #199FD5 </div>
-                                                        </div>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="gradient_inventivetalent_Flame Right" class="color_container gradient_container" style="background-image:linear-gradient(to top ,#08BED5,#199FD5)">
-                                                            <div>Flame Right<br/>#08BED5 #199FD5 </div>
-                                                        </div>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="color_inventivetalent_Ring" class="color_container" style="background-color:#F2C655">
-                                                            <div>Ring<br/>#F2C655</div>
-                                                        </div>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="color_inventivetalent_Center" class="color_container" style="background-color:#08BED5">
-                                                            <div>Center<br/>#08BED5</div>
-                                                        </div>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="color_inventivetalent_Black Background" class="color_container" style="background-color:#282828">
-                                                            <div>Black Background<br/>#282828</div>
-                                                        </div>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="color_inventivetalent_Theme Color" class="color_container" style="background-color:#298FA3">
-                                                            <div>Theme Color<br/>#298FA3</div>
-                                                        </div>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-
-                            <div class="row">
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
-                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
-                                </a>
-                                <br/>
-                                The Branding Resources for
-                                <a href="https://inventivetalent.dev" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">inventivetalent</a>
-                                by
-                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
-                                are licensed under a
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
-                            </div>
-                            <div class="row">
-                                The Respective Project may be Subject to a Different License.
-                            </div>
+            </div>
+            <div class="section row-full">
+                <div class="col s12">
+                    <h1>Resources</h1>
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="tabs z-depth-1" id="brandTabs">
+                                    <li class="tab">
+                                        <a id="tab_link_inventivetalent" class="tab_link" data-brand="inventivetalent" href="#tab_inventivetalent">inventivetalent</a>
+                                    </li>
+                                    <li class="tab">
+                                        <a id="tab_link_mcassets" class="tab_link" data-brand="mcassets" href="#tab_mcassets">MCAssets</a>
+                                    </li>
+                                    <li class="tab">
+                                        <a id="tab_link_minerender" class="tab_link" data-brand="minerender" href="#tab_minerender">MineRender</a>
+                                    </li>
+                                    <li class="tab">
+                                        <a id="tab_link_mineskin" class="tab_link" data-brand="mineskin" href="#tab_mineskin">MineSkin</a>
+                                    </li>
+                                    <li class="tab">
+                                        <a id="tab_link_pluginblueprint" class="tab_link" data-brand="pluginblueprint" href="#tab_pluginblueprint">PluginBlueprint</a>
+                                    </li>
+                                    <li class="tab">
+                                        <a id="tab_link_spiget" class="tab_link" data-brand="spiget" href="#tab_spiget">Spiget</a>
+                                    </li>
+                                    <li class="tab">
+                                        <a id="tab_link_trashapp" class="tab_link" data-brand="trashapp" href="#tab_trashapp">TrashApp</a>
+                                    </li>
+                                    <li class="tab">
+                                        <a id="tab_link_vrknock" class="tab_link" data-brand="vrknock" href="#tab_vrknock">VRKnock</a>
+                                    </li>
+                            </ul>
                         </div>
-                    </div>
-                    <div id="tab_mcassets" class="col s12 tab_content" data-brand="mcassets">
-                        <div class="container">
-                                <div class="row" id="mcassets_images">
-                                    <h3>Images</h3>
-                                    <div class="row">
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Logo</h6>
-                                                    <div class="img_preview_container" id="image_MCAssets_mcassets">
-                                                        <img id="img_preview_mcassets" src="img/MCAssets/mcassets-x256.png" width="256" alt="Logo" style="background-color:#f5f5f5; padding: 20px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="MCAssets" data-image="mcassets" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="MCAssets" data-image="mcassets" data-name="Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="MCAssets" data-image="mcassets" data-sizes="[]" data-name="Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>20px Padding</li>
-                                                            <li>Light Background</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-
-                            <div class="row">
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
-                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
-                                </a>
-                                <br/>
-                                The Branding Resources for
-                                <a href="https://mcasset.cloud" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">MCAssets</a>
-                                by
-                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
-                                are licensed under a
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
-                            </div>
-                            <div class="row">
-                                The Respective Project may be Subject to a Different License.
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab_minerender" class="col s12 tab_content" data-brand="minerender">
-                        <div class="container">
-                                <div class="row" id="minerender_images">
-                                    <h3>Images</h3>
-                                    <div class="row">
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Logo</h6>
-                                                    <div class="img_preview_container" id="image_MineRender_minerender">
-                                                        <img id="img_preview_minerender" src="img/MineRender/minerender-x256.png" width="256" alt="Logo" style="background-color:#f5f5f5; padding: 20px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="MineRender" data-image="minerender" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="MineRender" data-image="minerender" data-name="Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="MineRender" data-image="minerender" data-sizes="[]" data-name="Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>20px Padding</li>
-                                                            <li>Light Background</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-
-                            <div class="row">
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
-                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
-                                </a>
-                                <br/>
-                                The Branding Resources for
-                                <a href="https://minerender.org" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">MineRender</a>
-                                by
-                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
-                                are licensed under a
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
-                            </div>
-                            <div class="row">
-                                The Respective Project may be Subject to a Different License.
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab_mineskin" class="col s12 tab_content" data-brand="mineskin">
-                        <div class="container">
-                                <div class="row" id="mineskin_images">
-                                    <h3>Images</h3>
-                                    <div class="row">
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Logo</h6>
-                                                    <div class="img_preview_container" id="image_MineSkin_mineskin">
-                                                        <img id="img_preview_mineskin" src="img/MineSkin/mineskin-x256.png" width="256" alt="Logo" style="background-color:#f5f5f5; padding: 20px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="MineSkin" data-image="mineskin" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="MineSkin" data-image="mineskin" data-name="Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="MineSkin" data-image="mineskin" data-sizes="[]" data-name="Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>20px Padding</li>
-                                                            <li>Light Background</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-
-                            <div class="row">
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
-                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
-                                </a>
-                                <br/>
-                                The Branding Resources for
-                                <a href="https://mineskin.org" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">MineSkin</a>
-                                by
-                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
-                                are licensed under a
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
-                            </div>
-                            <div class="row">
-                                The Respective Project may be Subject to a Different License.
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab_pluginblueprint" class="col s12 tab_content" data-brand="pluginblueprint">
-                        <div class="container">
-                                <div class="row" id="pluginblueprint_images">
-                                    <h3>Images</h3>
-                                    <div class="row">
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Tiny Logo</h6>
-                                                    <div class="img_preview_container" id="image_PluginBlueprint_Tiny">
-                                                        <img id="img_preview_Tiny" src="img/PluginBlueprint/Tiny-x256.png" width="256" alt="Tiny Logo" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Tiny" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Tiny Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="Tiny" data-name="Tiny Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Tiny" data-sizes="[]" data-name="Tiny Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>0px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Tiny Logo Gray</h6>
-                                                    <div class="img_preview_container" id="image_PluginBlueprint_grayTiny">
-                                                        <img id="img_preview_grayTiny" src="img/PluginBlueprint/grayTiny-x256.png" width="256" alt="Tiny Logo Gray" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayTiny" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Tiny Logo Gray" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="grayTiny" data-name="Tiny Logo Gray" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayTiny" data-sizes="[]" data-name="Tiny Logo Gray" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>0px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Small Logo</h6>
-                                                    <div class="img_preview_container" id="image_PluginBlueprint_Small">
-                                                        <img id="img_preview_Small" src="img/PluginBlueprint/Small-x256.png" width="256" alt="Small Logo" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Small" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Small Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="Small" data-name="Small Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Small" data-sizes="[]" data-name="Small Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>0px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Small Logo Gray</h6>
-                                                    <div class="img_preview_container" id="image_PluginBlueprint_graySmall">
-                                                        <img id="img_preview_graySmall" src="img/PluginBlueprint/graySmall-x256.png" width="256" alt="Small Logo Gray" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="graySmall" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Small Logo Gray" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="graySmall" data-name="Small Logo Gray" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="graySmall" data-sizes="[]" data-name="Small Logo Gray" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>0px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Medium Logo</h6>
-                                                    <div class="img_preview_container" id="image_PluginBlueprint_Medium">
-                                                        <img id="img_preview_Medium" src="img/PluginBlueprint/Medium-x256.png" width="256" alt="Medium Logo" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Medium" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Medium Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="Medium" data-name="Medium Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Medium" data-sizes="[]" data-name="Medium Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>0px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Medium Logo Gray</h6>
-                                                    <div class="img_preview_container" id="image_PluginBlueprint_grayMedium">
-                                                        <img id="img_preview_grayMedium" src="img/PluginBlueprint/grayMedium-x256.png" width="256" alt="Medium Logo Gray" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayMedium" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Medium Logo Gray" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="grayMedium" data-name="Medium Logo Gray" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayMedium" data-sizes="[]" data-name="Medium Logo Gray" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>0px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Large Logo</h6>
-                                                    <div class="img_preview_container" id="image_PluginBlueprint_Large">
-                                                        <img id="img_preview_Large" src="img/PluginBlueprint/Large-x256.png" width="256" alt="Large Logo" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Large" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Large Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="Large" data-name="Large Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Large" data-sizes="[]" data-name="Large Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>0px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Large Logo Gray</h6>
-                                                    <div class="img_preview_container" id="image_PluginBlueprint_grayLarge">
-                                                        <img id="img_preview_grayLarge" src="img/PluginBlueprint/grayLarge-x256.png" width="256" alt="Large Logo Gray" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayLarge" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Large Logo Gray" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="grayLarge" data-name="Large Logo Gray" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayLarge" data-sizes="[]" data-name="Large Logo Gray" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>0px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Banner</h6>
-                                                    <div class="img_preview_container" id="image_PluginBlueprint_Banner">
-                                                        <img id="img_preview_Banner" src="img/PluginBlueprint/Banner-x256.png" width="256" alt="Banner" style="background-color:#f5f5f5; padding: 0px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Banner" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Banner" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="Banner" data-name="Banner" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Banner" data-sizes="[]" data-name="Banner" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>0px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-                                <div class="row" id="pluginblueprint_colors">
-                                    <h3>Colors</h3>
-                                    <div class="row">
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="color_PluginBlueprint_Blueprint Blue" class="color_container" style="background-color:#266BA4">
-                                                            <div>Blueprint Blue<br/>#266BA4</div>
+                            <div id="tab_inventivetalent" class="col s12 tab_content" data-brand="inventivetalent">
+                                <div class="container">
+                                        <div class="row" id="inventivetalent_images">
+                                            <h3>Images</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Logo Transparent</h6>
+                                                            <div class="img_preview_container" id="image_inventivetalent_flame-blender">
+                                                                <img id="img_preview_flame-blender" src="img/inventivetalent/flame-blender-x256.png" width="256" alt="Logo Transparent" style="background-color:#f5f5f5; padding: 5px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="flame-blender" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo Transparent" data-format="png">PNG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>5px Padding</li>
+                                                            </ul>
                                                         </div>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="color_PluginBlueprint_Gray" class="color_container" style="background-color:#353535">
-                                                            <div>Gray<br/>#353535</div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Logo Dark Background</h6>
+                                                            <div class="img_preview_container" id="image_inventivetalent_flame-blender">
+                                                                <img id="img_preview_flame-blender" src="img/inventivetalent/flame-blender-x256.png" width="256" alt="Logo Dark Background" style="background-color:#282828; padding: 5px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="flame-blender" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo Dark Background" data-format="png">PNG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>5px Padding</li>
+                                                                    <li>Background: #282828</li>
+                                                            </ul>
                                                         </div>
-                                                </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Black Logo</h6>
+                                                            <div class="img_preview_container" id="image_inventivetalent_icon_black">
+                                                                <img id="img_preview_icon_black" src="img/inventivetalent/icon_black-x256.png" width="256" alt="Black Logo" style="background-color:#f5f5f5; padding: 5px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="icon_black" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Black Logo" data-format="png">PNG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>5px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>White Logo</h6>
+                                                            <div class="img_preview_container" id="image_inventivetalent_icon_white">
+                                                                <img id="img_preview_icon_white" src="img/inventivetalent/icon_white-x256.png" width="256" alt="White Logo" style="background-color:#0a0a0a; padding: 5px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="icon_white" data-sizes="[32,64,128,256,512,1024,2048]" data-name="White Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="inventivetalent" data-image="icon_white" data-name="White Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="icon_white" data-sizes="[]" data-name="White Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>5px Padding</li>
+                                                                    <li>Dark Background</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Text Logo Transparent</h6>
+                                                            <div class="img_preview_container" id="image_inventivetalent_logo">
+                                                                <img id="img_preview_logo" src="img/inventivetalent/logo-x256.png" width="256" alt="Text Logo Transparent" style="background-color:#f5f5f5; padding: 5px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="inventivetalent" data-image="logo" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Text Logo Transparent" data-format="png">PNG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>5px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                             </div>
+                                        </div>
+                                        <div class="row" id="inventivetalent_colors">
+                                            <h3>Colors</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="gradient_inventivetalent_Flame Left" class="color_container gradient_container" style="background-image:linear-gradient(to bottom ,#08BED5,#199FD5)">
+                                                                    <div>Flame Left<br/>#08BED5 #199FD5 </div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="gradient_inventivetalent_Flame Right" class="color_container gradient_container" style="background-image:linear-gradient(to top ,#08BED5,#199FD5)">
+                                                                    <div>Flame Right<br/>#08BED5 #199FD5 </div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="color_inventivetalent_Ring" class="color_container" style="background-color:#F2C655">
+                                                                    <div>Ring<br/>#F2C655</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="color_inventivetalent_Center" class="color_container" style="background-color:#08BED5">
+                                                                    <div>Center<br/>#08BED5</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="color_inventivetalent_Black Background" class="color_container" style="background-color:#282828">
+                                                                    <div>Black Background<br/>#282828</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="color_inventivetalent_Theme Color" class="color_container" style="background-color:#298FA3">
+                                                                    <div>Theme Color<br/>#298FA3</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+
+                                    <div class="row">
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                            <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                        </a>
+                                        <br/>
+                                        The Branding Resources for
+                                        <a href="https://inventivetalent.dev" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">inventivetalent</a>
+                                        by
+                                        <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                        are licensed under a
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                                    </div>
+                                    <div class="row">
+                                        The Respective Project may be Subject to a Different License.
                                     </div>
                                 </div>
-                                <div class="row" id="pluginblueprint_fonts">
-                                    <h3>Fonts</h3>
+                            </div>
+                            <div id="tab_mcassets" class="col s12 tab_content" data-brand="mcassets">
+                                <div class="container">
+                                        <div class="row" id="mcassets_images">
+                                            <h3>Images</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Logo</h6>
+                                                            <div class="img_preview_container" id="image_MCAssets_mcassets">
+                                                                <img id="img_preview_mcassets" src="img/MCAssets/mcassets-x256.png" width="256" alt="Logo" style="background-color:#f5f5f5; padding: 20px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="MCAssets" data-image="mcassets" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="MCAssets" data-image="mcassets" data-name="Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="MCAssets" data-image="mcassets" data-sizes="[]" data-name="Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>20px Padding</li>
+                                                                    <li>Light Background</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+
                                     <div class="row">
-                                            <style>
-                                                /*@formatter:off*/
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                            <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                        </a>
+                                        <br/>
+                                        The Branding Resources for
+                                        <a href="https://mcasset.cloud" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">MCAssets</a>
+                                        by
+                                        <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                        are licensed under a
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                                    </div>
+                                    <div class="row">
+                                        The Respective Project may be Subject to a Different License.
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab_minerender" class="col s12 tab_content" data-brand="minerender">
+                                <div class="container">
+                                        <div class="row" id="minerender_images">
+                                            <h3>Images</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Logo</h6>
+                                                            <div class="img_preview_container" id="image_MineRender_minerender">
+                                                                <img id="img_preview_minerender" src="img/MineRender/minerender-x256.png" width="256" alt="Logo" style="background-color:#f5f5f5; padding: 20px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="MineRender" data-image="minerender" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="MineRender" data-image="minerender" data-name="Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="MineRender" data-image="minerender" data-sizes="[]" data-name="Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>20px Padding</li>
+                                                                    <li>Light Background</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+
+                                    <div class="row">
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                            <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                        </a>
+                                        <br/>
+                                        The Branding Resources for
+                                        <a href="https://minerender.org" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">MineRender</a>
+                                        by
+                                        <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                        are licensed under a
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                                    </div>
+                                    <div class="row">
+                                        The Respective Project may be Subject to a Different License.
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab_mineskin" class="col s12 tab_content" data-brand="mineskin">
+                                <div class="container">
+                                        <div class="row" id="mineskin_images">
+                                            <h3>Images</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Logo</h6>
+                                                            <div class="img_preview_container" id="image_MineSkin_mineskin">
+                                                                <img id="img_preview_mineskin" src="img/MineSkin/mineskin-x256.png" width="256" alt="Logo" style="background-color:#f5f5f5; padding: 20px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="MineSkin" data-image="mineskin" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="MineSkin" data-image="mineskin" data-name="Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="MineSkin" data-image="mineskin" data-sizes="[]" data-name="Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>20px Padding</li>
+                                                                    <li>Light Background</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+
+                                    <div class="row">
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                            <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                        </a>
+                                        <br/>
+                                        The Branding Resources for
+                                        <a href="https://mineskin.org" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">MineSkin</a>
+                                        by
+                                        <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                        are licensed under a
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                                    </div>
+                                    <div class="row">
+                                        The Respective Project may be Subject to a Different License.
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab_pluginblueprint" class="col s12 tab_content" data-brand="pluginblueprint">
+                                <div class="container">
+                                        <div class="row" id="pluginblueprint_images">
+                                            <h3>Images</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Tiny Logo</h6>
+                                                            <div class="img_preview_container" id="image_PluginBlueprint_Tiny">
+                                                                <img id="img_preview_Tiny" src="img/PluginBlueprint/Tiny-x256.png" width="256" alt="Tiny Logo" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Tiny" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Tiny Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="Tiny" data-name="Tiny Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Tiny" data-sizes="[]" data-name="Tiny Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>0px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Tiny Logo Gray</h6>
+                                                            <div class="img_preview_container" id="image_PluginBlueprint_grayTiny">
+                                                                <img id="img_preview_grayTiny" src="img/PluginBlueprint/grayTiny-x256.png" width="256" alt="Tiny Logo Gray" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayTiny" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Tiny Logo Gray" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="grayTiny" data-name="Tiny Logo Gray" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayTiny" data-sizes="[]" data-name="Tiny Logo Gray" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>0px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Small Logo</h6>
+                                                            <div class="img_preview_container" id="image_PluginBlueprint_Small">
+                                                                <img id="img_preview_Small" src="img/PluginBlueprint/Small-x256.png" width="256" alt="Small Logo" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Small" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Small Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="Small" data-name="Small Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Small" data-sizes="[]" data-name="Small Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>0px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Small Logo Gray</h6>
+                                                            <div class="img_preview_container" id="image_PluginBlueprint_graySmall">
+                                                                <img id="img_preview_graySmall" src="img/PluginBlueprint/graySmall-x256.png" width="256" alt="Small Logo Gray" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="graySmall" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Small Logo Gray" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="graySmall" data-name="Small Logo Gray" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="graySmall" data-sizes="[]" data-name="Small Logo Gray" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>0px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Medium Logo</h6>
+                                                            <div class="img_preview_container" id="image_PluginBlueprint_Medium">
+                                                                <img id="img_preview_Medium" src="img/PluginBlueprint/Medium-x256.png" width="256" alt="Medium Logo" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Medium" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Medium Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="Medium" data-name="Medium Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Medium" data-sizes="[]" data-name="Medium Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>0px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Medium Logo Gray</h6>
+                                                            <div class="img_preview_container" id="image_PluginBlueprint_grayMedium">
+                                                                <img id="img_preview_grayMedium" src="img/PluginBlueprint/grayMedium-x256.png" width="256" alt="Medium Logo Gray" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayMedium" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Medium Logo Gray" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="grayMedium" data-name="Medium Logo Gray" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayMedium" data-sizes="[]" data-name="Medium Logo Gray" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>0px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Large Logo</h6>
+                                                            <div class="img_preview_container" id="image_PluginBlueprint_Large">
+                                                                <img id="img_preview_Large" src="img/PluginBlueprint/Large-x256.png" width="256" alt="Large Logo" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Large" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Large Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="Large" data-name="Large Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Large" data-sizes="[]" data-name="Large Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>0px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Large Logo Gray</h6>
+                                                            <div class="img_preview_container" id="image_PluginBlueprint_grayLarge">
+                                                                <img id="img_preview_grayLarge" src="img/PluginBlueprint/grayLarge-x256.png" width="256" alt="Large Logo Gray" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayLarge" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Large Logo Gray" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="grayLarge" data-name="Large Logo Gray" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="grayLarge" data-sizes="[]" data-name="Large Logo Gray" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>0px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Banner</h6>
+                                                            <div class="img_preview_container" id="image_PluginBlueprint_Banner">
+                                                                <img id="img_preview_Banner" src="img/PluginBlueprint/Banner-x256.png" width="256" alt="Banner" style="background-color:#f5f5f5; padding: 0px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Banner" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Banner" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="PluginBlueprint" data-image="Banner" data-name="Banner" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="PluginBlueprint" data-image="Banner" data-sizes="[]" data-name="Banner" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>0px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" id="pluginblueprint_colors">
+                                            <h3>Colors</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="color_PluginBlueprint_Blueprint Blue" class="color_container" style="background-color:#266BA4">
+                                                                    <div>Blueprint Blue<br/>#266BA4</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="color_PluginBlueprint_Gray" class="color_container" style="background-color:#353535">
+                                                                    <div>Gray<br/>#353535</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" id="pluginblueprint_fonts">
+                                            <h3>Fonts</h3>
+                                            <div class="row">
+                                                    <style>
+                                                        /*@formatter:off*/
                                                 @font-face {
                                                     font-family: Archistico;
                                                     src: url(fonts/Archistico.ttf);
                                                 }
                                                 /*@formatter:on*/
-                                            </style>
-                                            <div class="col s12 m8 l6 xl5">
-                                                <div class="row">
-                                                    <div id="font_PluginBlueprint_Archistico" class="font_container" style="font-family:Archistico;">
-                                                       <a href="https://www.archistico.com/product/font-archistico/" target="_blank">Archistico</a>
+                                                    </style>
+                                                    <div class="col s12 m8 l6 xl5">
+                                                        <div class="row">
+                                                            <div id="font_PluginBlueprint_Archistico" class="font_container" style="font-family:Archistico;">
+                                                                <a href="https://www.archistico.com/product/font-archistico/" target="_blank">Archistico</a>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
                                             </div>
-                                    </div>
-                                </div>
+                                        </div>
 
-                            <div class="row">
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
-                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
-                                </a>
-                                <br/>
-                                The Branding Resources for
-                                <a href="https://pluginblueprint.net" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">PluginBlueprint</a>
-                                by
-                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
-                                are licensed under a
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
-                            </div>
-                            <div class="row">
-                                The Respective Project may be Subject to a Different License.
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab_spiget" class="col s12 tab_content" data-brand="spiget">
-                        <div class="container">
-                                <div class="row" id="spiget_images">
-                                    <h3>Images</h3>
                                     <div class="row">
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Plain Logo</h6>
-                                                    <div class="img_preview_container" id="image_Spiget_logo_plain">
-                                                        <img id="img_preview_logo_plain" src="img/Spiget/logo_plain-x256.png" width="256" alt="Plain Logo" style="background-color:#f5f5f5; padding: 10px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_plain" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Plain Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="Spiget" data-image="logo_plain" data-name="Plain Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_plain" data-sizes="[]" data-name="Plain Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Center Text Logo</h6>
-                                                    <div class="img_preview_container" id="image_Spiget_logo_text_center">
-                                                        <img id="img_preview_logo_text_center" src="img/Spiget/logo_text_center-x256.png" width="256" alt="Center Text Logo" style="background-color:#f5f5f5; padding: 10px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_text_center" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Center Text Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="Spiget" data-image="logo_text_center" data-name="Center Text Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_text_center" data-sizes="[]" data-name="Center Text Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Text Logo</h6>
-                                                    <div class="img_preview_container" id="image_Spiget_logo_text">
-                                                        <img id="img_preview_logo_text" src="img/Spiget/logo_text-x256.png" width="256" alt="Text Logo" style="background-color:#f5f5f5; padding: 10px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_text" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Text Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="Spiget" data-image="logo_text" data-name="Text Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_text" data-sizes="[]" data-name="Text Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Wide Text Logo</h6>
-                                                    <div class="img_preview_container" id="image_Spiget_wide">
-                                                        <img id="img_preview_wide" src="img/Spiget/wide-x256.png" width="256" alt="Wide Text Logo" style="background-color:#f5f5f5; padding: 10px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="wide" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Wide Text Logo" data-format="png">PNG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                            <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                        </a>
+                                        <br/>
+                                        The Branding Resources for
+                                        <a href="https://pluginblueprint.net" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">PluginBlueprint</a>
+                                        by
+                                        <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                        are licensed under a
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                                    </div>
+                                    <div class="row">
+                                        The Respective Project may be Subject to a Different License.
                                     </div>
                                 </div>
-                                <div class="row" id="spiget_colors">
-                                    <h3>Colors</h3>
-                                    <div class="row">
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="color_Spiget_Orange" class="color_container" style="background-color:#FEA501">
-                                                            <div>Orange<br/>#FEA501</div>
+                            </div>
+                            <div id="tab_spiget" class="col s12 tab_content" data-brand="spiget">
+                                <div class="container">
+                                        <div class="row" id="spiget_images">
+                                            <h3>Images</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Plain Logo</h6>
+                                                            <div class="img_preview_container" id="image_Spiget_logo_plain">
+                                                                <img id="img_preview_logo_plain" src="img/Spiget/logo_plain-x256.png" width="256" alt="Plain Logo" style="background-color:#f5f5f5; padding: 10px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_plain" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Plain Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="Spiget" data-image="logo_plain" data-name="Plain Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_plain" data-sizes="[]" data-name="Plain Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                            </ul>
                                                         </div>
-                                                </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Center Text Logo</h6>
+                                                            <div class="img_preview_container" id="image_Spiget_logo_text_center">
+                                                                <img id="img_preview_logo_text_center" src="img/Spiget/logo_text_center-x256.png" width="256" alt="Center Text Logo" style="background-color:#f5f5f5; padding: 10px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_text_center" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Center Text Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="Spiget" data-image="logo_text_center" data-name="Center Text Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_text_center" data-sizes="[]" data-name="Center Text Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Text Logo</h6>
+                                                            <div class="img_preview_container" id="image_Spiget_logo_text">
+                                                                <img id="img_preview_logo_text" src="img/Spiget/logo_text-x256.png" width="256" alt="Text Logo" style="background-color:#f5f5f5; padding: 10px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_text" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Text Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="Spiget" data-image="logo_text" data-name="Text Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="logo_text" data-sizes="[]" data-name="Text Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Wide Text Logo</h6>
+                                                            <div class="img_preview_container" id="image_Spiget_wide">
+                                                                <img id="img_preview_wide" src="img/Spiget/wide-x256.png" width="256" alt="Wide Text Logo" style="background-color:#f5f5f5; padding: 10px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="wide" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Wide Text Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="Spiget" data-image="wide" data-name="Wide Text Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="Spiget" data-image="wide" data-sizes="[]" data-name="Wide Text Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                             </div>
-                                    </div>
-                                </div>
+                                        </div>
+                                        <div class="row" id="spiget_colors">
+                                            <h3>Colors</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="color_Spiget_Orange" class="color_container" style="background-color:#FEA501">
+                                                                    <div>Orange<br/>#FEA501</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
 
-                            <div class="row">
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
-                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
-                                </a>
-                                <br/>
-                                The Branding Resources for
-                                <a href="https://spiget.org" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Spiget</a>
-                                by
-                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
-                                are licensed under a
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
-                            </div>
-                            <div class="row">
-                                The Respective Project may be Subject to a Different License.
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab_trashapp" class="col s12 tab_content" data-brand="trashapp">
-                        <div class="container">
-                                <div class="row" id="trashapp_images">
-                                    <h3>Images</h3>
                                     <div class="row">
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Transparent Logo</h6>
-                                                    <div class="img_preview_container" id="image_TrashApp_trashcan_arrow">
-                                                        <img id="img_preview_trashcan_arrow" src="img/TrashApp/trashcan_arrow-x256.png" width="256" alt="Transparent Logo" style="background-color:#f5f5f5; padding: 30px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan_arrow" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Transparent Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="TrashApp" data-image="trashcan_arrow" data-name="Transparent Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan_arrow" data-sizes="[]" data-name="Transparent Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>30px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Green Background Logo</h6>
-                                                    <div class="img_preview_container" id="image_TrashApp_trashcan_arrow">
-                                                        <img id="img_preview_trashcan_arrow" src="img/TrashApp/trashcan_arrow-x256.png" width="256" alt="Green Background Logo" style="background-color:#689f38; padding: 30px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan_arrow" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Green Background Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="TrashApp" data-image="trashcan_arrow" data-name="Green Background Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan_arrow" data-sizes="[]" data-name="Green Background Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>30px Padding</li>
-                                                            <li>Background: #689f38</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Plain Trashcan</h6>
-                                                    <div class="img_preview_container" id="image_TrashApp_trashcan">
-                                                        <img id="img_preview_trashcan" src="img/TrashApp/trashcan-x256.png" width="256" alt="Plain Trashcan" style="background-color:#f5f5f5; padding: 20px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Plain Trashcan" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="TrashApp" data-image="trashcan" data-name="Plain Trashcan" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan" data-sizes="[]" data-name="Plain Trashcan" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>20px Padding</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                            <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                        </a>
+                                        <br/>
+                                        The Branding Resources for
+                                        <a href="https://spiget.org" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Spiget</a>
+                                        by
+                                        <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                        are licensed under a
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                                    </div>
+                                    <div class="row">
+                                        The Respective Project may be Subject to a Different License.
                                     </div>
                                 </div>
-                                <div class="row" id="trashapp_colors">
-                                    <h3>Colors</h3>
-                                    <div class="row">
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="color_TrashApp_Green Background" class="color_container" style="background-color:#689F38">
-                                                            <div>Green Background<br/>#689F38</div>
+                            </div>
+                            <div id="tab_trashapp" class="col s12 tab_content" data-brand="trashapp">
+                                <div class="container">
+                                        <div class="row" id="trashapp_images">
+                                            <h3>Images</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Transparent Logo</h6>
+                                                            <div class="img_preview_container" id="image_TrashApp_trashcan_arrow">
+                                                                <img id="img_preview_trashcan_arrow" src="img/TrashApp/trashcan_arrow-x256.png" width="256" alt="Transparent Logo" style="background-color:#f5f5f5; padding: 30px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan_arrow" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Transparent Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="TrashApp" data-image="trashcan_arrow" data-name="Transparent Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan_arrow" data-sizes="[]" data-name="Transparent Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>30px Padding</li>
+                                                            </ul>
                                                         </div>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="color_TrashApp_Blue" class="color_container" style="background-color:#283593">
-                                                            <div>Blue<br/>#283593</div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Green Background Logo</h6>
+                                                            <div class="img_preview_container" id="image_TrashApp_trashcan_arrow">
+                                                                <img id="img_preview_trashcan_arrow" src="img/TrashApp/trashcan_arrow-x256.png" width="256" alt="Green Background Logo" style="background-color:#689f38; padding: 30px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan_arrow" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Green Background Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="TrashApp" data-image="trashcan_arrow" data-name="Green Background Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan_arrow" data-sizes="[]" data-name="Green Background Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>30px Padding</li>
+                                                                    <li>Background: #689f38</li>
+                                                            </ul>
                                                         </div>
-                                                </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Plain Trashcan</h6>
+                                                            <div class="img_preview_container" id="image_TrashApp_trashcan">
+                                                                <img id="img_preview_trashcan" src="img/TrashApp/trashcan-x256.png" width="256" alt="Plain Trashcan" style="background-color:#f5f5f5; padding: 20px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Plain Trashcan" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="TrashApp" data-image="trashcan" data-name="Plain Trashcan" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="TrashApp" data-image="trashcan" data-sizes="[]" data-name="Plain Trashcan" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>20px Padding</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                             </div>
-                                    </div>
-                                </div>
+                                        </div>
+                                        <div class="row" id="trashapp_colors">
+                                            <h3>Colors</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="color_TrashApp_Green Background" class="color_container" style="background-color:#689F38">
+                                                                    <div>Green Background<br/>#689F38</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="color_TrashApp_Blue" class="color_container" style="background-color:#283593">
+                                                                    <div>Blue<br/>#283593</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
 
-                            <div class="row">
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
-                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
-                                </a>
-                                <br/>
-                                The Branding Resources for
-                                <a href="https://trashapp.cc" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TrashApp</a>
-                                by
-                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
-                                are licensed under a
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
-                            </div>
-                            <div class="row">
-                                The Respective Project may be Subject to a Different License.
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab_vrknock" class="col s12 tab_content" data-brand="vrknock">
-                        <div class="container">
-                                <div class="row" id="vrknock_images">
-                                    <h3>Images</h3>
                                     <div class="row">
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Transparent Logo</h6>
-                                                    <div class="img_preview_container" id="image_VRKnock_vrknock">
-                                                        <img id="img_preview_vrknock" src="img/VRKnock/vrknock-x256.png" width="256" alt="Transparent Logo" style="background-color:#f5f5f5; padding: 20px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="vrknock" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Transparent Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="VRKnock" data-image="vrknock" data-name="Transparent Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="vrknock" data-sizes="[]" data-name="Transparent Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>20px Padding</li>
-                                                            <li>Light Background</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Purple Background Logo</h6>
-                                                    <div class="img_preview_container" id="image_VRKnock_vrknock">
-                                                        <img id="img_preview_vrknock" src="img/VRKnock/vrknock-x256.png" width="256" alt="Purple Background Logo" style="background-color:#8423c3; padding: 20px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="vrknock" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Purple Background Logo" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="VRKnock" data-image="vrknock" data-name="Purple Background Logo" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="vrknock" data-sizes="[]" data-name="Purple Background Logo" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>20px Padding</li>
-                                                            <li>Background: #8423c3</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>Knocking Hand</h6>
-                                                    <div class="img_preview_container" id="image_VRKnock_knocking_hand">
-                                                        <img id="img_preview_knocking_hand" src="img/VRKnock/knocking_hand-x256.png" width="256" alt="Knocking Hand" style="background-color:#f5f5f5; padding: 20px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="knocking_hand" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Knocking Hand" data-format="png">PNG</a>
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="VRKnock" data-image="knocking_hand" data-name="Knocking Hand" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="knocking_hand" data-sizes="[]" data-name="Knocking Hand" data-format="svg">SVG</a>
-                                                    </div>
-                                                    <ul class="img_notice_list">
-                                                            <li>20px Padding</li>
-                                                            <li>Light Background</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                            <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                        </a>
+                                        <br/>
+                                        The Branding Resources for
+                                        <a href="https://trashapp.cc" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TrashApp</a>
+                                        by
+                                        <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                        are licensed under a
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                                    </div>
+                                    <div class="row">
+                                        The Respective Project may be Subject to a Different License.
                                     </div>
                                 </div>
-                                <div class="row" id="vrknock_colors">
-                                    <h3>Colors</h3>
-                                    <div class="row">
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="color_VRKnock_Gray" class="color_container" style="background-color:#BABABA">
-                                                            <div>Gray<br/>#BABABA</div>
+                            </div>
+                            <div id="tab_vrknock" class="col s12 tab_content" data-brand="vrknock">
+                                <div class="container">
+                                        <div class="row" id="vrknock_images">
+                                            <h3>Images</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Transparent Logo</h6>
+                                                            <div class="img_preview_container" id="image_VRKnock_vrknock">
+                                                                <img id="img_preview_vrknock" src="img/VRKnock/vrknock-x256.png" width="256" alt="Transparent Logo" style="background-color:#f5f5f5; padding: 20px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="vrknock" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Transparent Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="VRKnock" data-image="vrknock" data-name="Transparent Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="vrknock" data-sizes="[]" data-name="Transparent Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>20px Padding</li>
+                                                                    <li>Light Background</li>
+                                                            </ul>
                                                         </div>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                        <div id="color_VRKnock_Purple Background" class="color_container" style="background-color:#8423C3">
-                                                            <div>Purple Background<br/>#8423C3</div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Purple Background Logo</h6>
+                                                            <div class="img_preview_container" id="image_VRKnock_vrknock">
+                                                                <img id="img_preview_vrknock" src="img/VRKnock/vrknock-x256.png" width="256" alt="Purple Background Logo" style="background-color:#8423c3; padding: 20px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="vrknock" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Purple Background Logo" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="VRKnock" data-image="vrknock" data-name="Purple Background Logo" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="vrknock" data-sizes="[]" data-name="Purple Background Logo" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>20px Padding</li>
+                                                                    <li>Background: #8423c3</li>
+                                                            </ul>
                                                         </div>
-                                                </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>Knocking Hand</h6>
+                                                            <div class="img_preview_container" id="image_VRKnock_knocking_hand">
+                                                                <img id="img_preview_knocking_hand" src="img/VRKnock/knocking_hand-x256.png" width="256" alt="Knocking Hand" style="background-color:#f5f5f5; padding: 20px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="knocking_hand" data-sizes="[32,64,128,256,512,1024,2048]" data-name="Knocking Hand" data-format="png">PNG</a>
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="VRKnock" data-image="knocking_hand" data-name="Knocking Hand" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="VRKnock" data-image="knocking_hand" data-sizes="[]" data-name="Knocking Hand" data-format="svg">SVG</a>
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                    <li>20px Padding</li>
+                                                                    <li>Light Background</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                             </div>
-                                    </div>
-                                </div>
+                                        </div>
+                                        <div class="row" id="vrknock_colors">
+                                            <h3>Colors</h3>
+                                            <div class="row">
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="color_VRKnock_Gray" class="color_container" style="background-color:#BABABA">
+                                                                    <div>Gray<br/>#BABABA</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                                <div id="color_VRKnock_Purple Background" class="color_container" style="background-color:#8423C3">
+                                                                    <div>Purple Background<br/>#8423C3</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
 
-                            <div class="row">
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
-                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
-                                </a>
-                                <br/>
-                                The Branding Resources for
-                                <a href="https://vrknock.app" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">VRKnock</a>
-                                by
-                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
-                                are licensed under a
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                                    <div class="row">
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                            <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                        </a>
+                                        <br/>
+                                        The Branding Resources for
+                                        <a href="https://vrknock.app" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">VRKnock</a>
+                                        by
+                                        <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                        are licensed under a
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                                    </div>
+                                    <div class="row">
+                                        The Respective Project may be Subject to a Different License.
+                                    </div>
+                                </div>
                             </div>
-                            <div class="row">
-                                The Respective Project may be Subject to a Different License.
-                            </div>
-                        </div>
                     </div>
+                </div>
             </div>
         </div>
 

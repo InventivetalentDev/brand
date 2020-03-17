@@ -75,6 +75,26 @@
                 text-decoration: none;
                 color: black;
             }
+
+            #guideline_container{
+                font-size: 18px;
+            }
+
+            .do{
+                color: green;
+            }
+            .dont{
+                color: red;
+            }
+        </style>
+        <style>
+            /* https://coderwall.com/p/hkgamw/creating-full-width-100-container-inside-fixed-width-container */
+            .row-full {
+                width: 90vw;
+                position: relative;
+                margin-left: -45vw;
+                left: 50%;
+            }
         </style>
         <style>
             /*@formatter:off*/
@@ -89,128 +109,154 @@
         </style>
     </head>
     <body>
-        <div class="col s12">
-            <h1>Guidelines</h1>
-
-        </div>
-        <div class="divider"></div>
-        <div class="col s12">
-            <h1>Resources</h1>
-            <div class="row">
+        <div class="container">
+            <div class="section row-full">
                 <div class="col s12">
-                    <ul class="tabs z-depth-1" id="brandTabs">
-                        {{#each brands}}
-                            <li class="tab">
-                                <a id="tab_link_{{id}}" class="tab_link" data-brand="{{id}}" href="#tab_{{id}}">{{name}}</a>
-                            </li>
-                        {{/each}}
-                    </ul>
+                    <h1>Guidelines</h1>
+
+                    <div id="guideline_container">
+                        <div class="row">
+                            <strong class="do">Do</strong> use the provided logos, images and other resources to refer to the respective projects
+                        </div>
+                        <div class="row">
+                            <strong class="do">Do</strong> keep appropriate padding around images and make sure they don't clip into other elements
+                        </div>
+                        <div class="row">
+                            <strong class="do">Do</strong> link back to the respective project websites where possible
+                        </div>
+                        <div class="row">
+                            <strong class="do">Do</strong> use appropriate sizes for images to ensure their content is properly visible
+                        </div>
+
+                        <div class="row">
+                            <strong class="dont">Don't</strong> modify the images in any way that alters their shape, proportion, color or orientation
+                        </div>
+                        <div class="row">
+                            <strong class="dont">Don't</strong> change the color scheme. Use the colors provided below
+                        </div>
+                    </div>
                 </div>
-                {{#each brands}}
-                    <div id="tab_{{id}}" class="col s12 tab_content" data-brand="{{id}}">
-                        <div class="container">
-                            {{#if hasImages}}
-                                <div class="row" id="{{id}}_images">
-                                    <h3>Images</h3>
-                                    <div class="row">
-                                        {{#each images}}
-                                            <div class="col s12 m6 l6 xl4 img_col">
-                                                <div class="row">
-                                                    <h6>{{name}}</h6>
-                                                    <div class="img_preview_container" id="image_{{../name}}_{{id}}">
-                                                        <img id="img_preview_{{id}}" src="img/{{../name}}/{{file}}-x{{@root.previewSize}}.png" width="{{@root.previewSize}}" alt="{{name}}" style="background-color:{{backgroundColor}}; padding: {{padding}}px;"/>
-                                                        <a href="#" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="{{sizesStr}}" data-name="{{name}}" data-format="png">PNG</a>
-                                                        {{#if hasSvg}}
-                                                            <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-name="{{name}}" data-format="svg">SVG</a>-->
-                                                            <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="[]" data-name="{{name}}" data-format="svg">SVG</a>
-                                                        {{/if}}
+            </div>
+            <div class="section row-full">
+                <div class="col s12">
+                    <h1>Resources</h1>
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="tabs z-depth-1" id="brandTabs">
+                                {{#each brands}}
+                                    <li class="tab">
+                                        <a id="tab_link_{{id}}" class="tab_link" data-brand="{{id}}" href="#tab_{{id}}">{{name}}</a>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        {{#each brands}}
+                            <div id="tab_{{id}}" class="col s12 tab_content" data-brand="{{id}}">
+                                <div class="container">
+                                    {{#if hasImages}}
+                                        <div class="row" id="{{id}}_images">
+                                            <h3>Images</h3>
+                                            <div class="row">
+                                                {{#each images}}
+                                                    <div class="col s12 m6 l6 xl4 img_col">
+                                                        <div class="row">
+                                                             <h6>{{name}}</h6>
+                                                            <div class="img_preview_container" id="image_{{../name}}_{{id}}">
+                                                                <img id="img_preview_{{id}}" src="img/{{../name}}/{{file}}-x{{@root.previewSize}}.png" width="{{@root.previewSize}}" alt="{{name}}" style="background-color:{{backgroundColor}}; padding: {{padding}}px;"/>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="{{sizesStr}}" data-name="{{name}}" data-format="png">PNG</a>
+                                                                {{#if hasSvg}}
+                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-name="{{name}}" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="[]" data-name="{{name}}" data-format="svg">SVG</a>
+                                                                {{/if}}
+                                                            </div>
+                                                            <ul class="img_notice_list">
+                                                                {{#if hasPadding}}
+                                                                    <li>{{padding}}px Padding</li>
+                                                                {{/if}}
+                                                                {{#if isDarkBackground}}
+                                                                    <li>Dark Background</li>
+                                                                {{/if}}
+                                                                {{#if isLightBackground}}
+                                                                    <li>Light Background</li>
+                                                                {{/if}}
+                                                                {{#if isCustomBackground}}
+                                                                    <li>Background: {{backgroundColor}}</li>
+                                                                {{/if}}
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                    <ul class="img_notice_list">
-                                                        {{#if hasPadding}}
-                                                            <li>{{padding}}px Padding</li>
-                                                        {{/if}}
-                                                        {{#if isDarkBackground}}
-                                                            <li>Dark Background</li>
-                                                        {{/if}}
-                                                        {{#if isLightBackground}}
-                                                            <li>Light Background</li>
-                                                        {{/if}}
-                                                        {{#if isCustomBackground}}
-                                                            <li>Background: {{backgroundColor}}</li>
-                                                        {{/if}}
-                                                    </ul>
-                                                </div>
+                                                {{/each}}
                                             </div>
-                                        {{/each}}
-                                    </div>
-                                </div>
-                            {{/if}}
-                            {{#if hasColors}}
-                                <div class="row" id="{{id}}_colors">
-                                    <h3>Colors</h3>
-                                    <div class="row">
-                                        {{#each colors}}
-                                            <div class="col s12 m4 l3 xl3">
-                                                <div class="row">
-                                                    {{#if isColor}}
-                                                        <div id="color_{{../name}}_{{name}}" class="color_container" style="background-color:{{color}}">
-                                                            <div>{{name}}<br/>{{color}}</div>
+                                        </div>
+                                    {{/if}}
+                                    {{#if hasColors}}
+                                        <div class="row" id="{{id}}_colors">
+                                            <h3>Colors</h3>
+                                            <div class="row">
+                                                {{#each colors}}
+                                                    <div class="col s12 m4 l3 xl3">
+                                                        <div class="row">
+                                                            {{#if isColor}}
+                                                                <div id="color_{{../name}}_{{name}}" class="color_container" style="background-color:{{color}}">
+                                                                    <div>{{name}}<br/>{{color}}</div>
+                                                                </div>
+                                                            {{/if}}
+                                                            {{#if isGradient}}
+                                                                <div id="gradient_{{../name}}_{{name}}" class="color_container gradient_container" style="background-image:linear-gradient({{gradientDirection}} {{#each gradient}},{{this}}{{/each}})">
+                                                                    <div>{{name}}<br/>{{#each gradient}}{{this}} {{/each}}</div>
+                                                                </div>
+                                                            {{/if}}
                                                         </div>
-                                                    {{/if}}
-                                                    {{#if isGradient}}
-                                                        <div id="gradient_{{../name}}_{{name}}" class="color_container gradient_container" style="background-image:linear-gradient({{gradientDirection}} {{#each gradient}},{{this}}{{/each}})">
-                                                            <div>{{name}}<br/>{{#each gradient}}{{this}} {{/each}}</div>
-                                                        </div>
-                                                    {{/if}}
-                                                </div>
+                                                    </div>
+                                                {{/each}}
                                             </div>
-                                        {{/each}}
-                                    </div>
-                                </div>
-                            {{/if}}
-                            {{#if hasFonts}}
-                                <div class="row" id="{{id}}_fonts">
-                                    <h3>Fonts</h3>
-                                    <div class="row">
-                                        {{#each fonts}}
-                                            <style>
-                                                /*@formatter:off*/
+                                        </div>
+                                    {{/if}}
+                                    {{#if hasFonts}}
+                                        <div class="row" id="{{id}}_fonts">
+                                            <h3>Fonts</h3>
+                                            <div class="row">
+                                                {{#each fonts}}
+                                                    <style>
+                                                        /*@formatter:off*/
                                                 @font-face {
                                                     font-family: {{family}};
                                                     src: url(fonts/{{family}}.ttf);
                                                 }
                                                 /*@formatter:on*/
-                                            </style>
-                                            <div class="col s12 m8 l6 xl5">
-                                                <div class="row">
-                                                    <div id="font_{{../name}}_{{family}}" class="font_container" style="font-family:{{family}};">
-                                                       <a href="{{url}}" target="_blank">{{family}}</a>
+                                                    </style>
+                                                    <div class="col s12 m8 l6 xl5">
+                                                        <div class="row">
+                                                            <div id="font_{{../name}}_{{family}}" class="font_container" style="font-family:{{family}};">
+                                                                <a href="{{url}}" target="_blank">{{family}}</a>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                {{/each}}
                                             </div>
-                                        {{/each}}
+                                        </div>
+                                    {{/if}}
+
+                                    <div class="row">
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                                            <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                                        </a>
+                                        <br/>
+                                        The Branding Resources for
+                                        <a href="https://{{url}}" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{name}}</a>
+                                        by
+                                        <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
+                                        are licensed under a
+                                        <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+                                    </div>
+                                    <div class="row">
+                                        The Respective Project may be Subject to a Different License.
                                     </div>
                                 </div>
-                            {{/if}}
-
-                            <div class="row">
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
-                                    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
-                                </a>
-                                <br/>
-                                The Branding Resources for
-                                <a href="https://{{url}}" target="_blank" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{name}}</a>
-                                by
-                                <a xmlns:cc="http://creativecommons.org/ns#" href="https://inventivetalent.dev" target="_blank" property="cc:attributionName" rel="cc:attributionURL">inventivetalent</a>
-                                are licensed under a
-                                <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
                             </div>
-                            <div class="row">
-                                The Respective Project may be Subject to a Different License.
-                            </div>
-                        </div>
+                        {{/each}}
                     </div>
-                {{/each}}
+                </div>
             </div>
         </div>
 
