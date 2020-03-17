@@ -46,5 +46,15 @@ module.exports = {
             file:"Banner",
             padding: 0
         }
+    ],
+    colors:[
+        {
+            name:"Blueprint Blue",
+            color:"#266ba4"
+        },
+        {
+            name:"Gray",
+            color:"#353535"
+        }
     ]
 };
