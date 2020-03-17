@@ -1,4 +1,5 @@
 module.exports = {
+    name:"MineSkin",
     url: "mineskin.org",
     images: [
         {

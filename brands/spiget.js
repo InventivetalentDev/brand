@@ -1,4 +1,5 @@
 module.exports = {
+    name:"Spiget",
     url: "spiget.org",
     images: [
         {

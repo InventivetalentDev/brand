@@ -1,4 +1,5 @@
 module.exports = {
+    name:"MCAssets",
     url: "mcasset.cloud",
     images: [
         {

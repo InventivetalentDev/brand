@@ -1,4 +1,5 @@
 module.exports = {
+    name:"PluginBlueprint",
     url: "pluginblueprint.net",
     images: [
         {

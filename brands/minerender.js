@@ -1,4 +1,5 @@
 module.exports = {
+    name:"MineRender",
     url: "minerender.org",
     images: [
         {

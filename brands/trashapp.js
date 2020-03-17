@@ -1,4 +1,5 @@
 module.exports = {
+    name:"TrashApp",
     url: "trashapp.cc",
     images: [
         {

@@ -1,4 +1,5 @@
 module.exports = {
+    name:"inventivetalent",
     url: "inventivetalent.dev",
     images: [
         {

@@ -1,4 +1,5 @@
 module.exports = {
+    name:"VRKnock",
     url: "vrknock.app",
     images: [
         {
