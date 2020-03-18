@@ -43,7 +43,7 @@ async function doStuff() {
 
                         if (needsTabImage && TAB_SIZE === s) {
                             needsTabImage = false;
-                            b.tabImage = "img/" + b.name + "/" + image.file + "-x" + TAB_SIZE + ".png"
+                            b.tabImage = "img/" + b.id + "/" + image.file + "-x" + TAB_SIZE + ".png"
                         }
                     }
                 }
