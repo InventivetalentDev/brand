@@ -1,6 +1,5 @@
 const path = require("path");
 const fs = require('fs');
-const ejs = require("ejs");
 const Handlebars = require("handlebars");
 
 const PREVIEW_SIZE = 256;
