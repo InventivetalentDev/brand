@@ -163,10 +163,10 @@
                                                              <h6>{{name}}</h6>
                                                             <div class="img_preview_container" id="image_{{../id}}_{{id}}">
                                                                 <img id="img_preview_{{id}}" src="img/{{../id}}/{{file}}-x{{@root.previewSize}}.png" width="{{@root.previewSize}}" alt="{{name}}" style="background-color:{{backgroundColor}}; padding: {{padding}}px;"/>
-                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="{{sizesStr}}" data-name="{{name}}" data-format="png">PNG</a>
+                                                                <a href="#" class="image_preview_download_button img_modal_button" data-brand="{{../id}}" data-image="{{file}}" data-sizes="{{sizesStr}}" data-name="{{name}}" data-format="png">PNG</a>
                                                                 {{#if hasSvg}}
-                                                                    <!--                                                            <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-name="{{name}}" data-format="svg">SVG</a>-->
-                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="{{../name}}" data-image="{{file}}" data-sizes="[]" data-name="{{name}}" data-format="svg">SVG</a>
+                                                                    <!--                                              image_preview_download_button              <a href="#" target="_blank" download class="image_preview_download_button image_download_btn" data-brand="{{../name}}" data-image="{{file}}" data-name="{{name}}" data-format="svg">SVG</a>-->
+                                                                    <a href="#" target="_blank" class="image_preview_download_button img_modal_button" data-brand="{{../id}}" data-image="{{file}}" data-sizes="[]" data-name="{{name}}" data-format="svg">SVG</a>
                                                                 {{/if}}
                                                             </div>
                                                             <ul class="img_notice_list">
@@ -320,8 +320,8 @@
                     let $this = $(this);
                     let brand = $this.data("brand");
                     let image = $this.data("image");
-                    let size = $this.data("size");
-                    let format = $this.data("format");
+                    let size = $this.data("size") || {{@root.previewSize}};
+                    let format = $this.data("format") || "png";
                     $this.attr("href", getImagePath(brand, image, size, format));
                 });
 
